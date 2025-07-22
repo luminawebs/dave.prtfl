@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-07-06T14:11:18.219Z",
+  "imageOptimization": {
+    "originalSizeMB": "37.92",
+    "optimizedSizeMB": "6.17",
+    "savingsMB": "31.75",
+    "savingsPercent": "83.7"
+  },
+  "bundleAnalysis": {},
+  "recommendations": [
+    "✅ Excellent image optimization achieved!",
+    "⚠️ Large file: public\\assets\\img\\courses.png (1.22 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\01-how-personalized-are-your-training-videos.png (2.69 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\02-how-does-your-video-content-adapt-to-different-learning-styles.png (2.81 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\03-how-interactive-are-your-training videos.png (2.94 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\04-how-does-your-organization-use-synthetic-media(AI-generated-content).png (2.05 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\04-how-quickly can-you-create-new-training content.png (2.11 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\05-how-does-your-organization-address-ethical-concerns with-synthetic-media.png (2.14 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\how-does-your-system-handle-branching-scenarios.png (2.04 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\g\\how-transparent-are-you-about-using-AI-generated-content.png (2.08 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\portfolio\\material-receipt\\02-finished\\end-img.png (13.80 MB) - consider optimization",
+    "⚠️ Large file: public\\assets\\img\\services\\3d_assistants.png (1.05 MB) - consider optimization",
+    "💡 Use minified version: public/assets/vendor/bootstrap/css/bootstrap.min.css instead of public/assets/vendor/bootstrap/css/bootstrap.css",
+    "💡 Use minified version: public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js instead of public/assets/vendor/bootstrap/js/bootstrap.bundle.js",
+    "💡 24 images could be converted to WebP format"
+  ]
+}

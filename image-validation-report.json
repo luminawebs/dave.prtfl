@@ -1,0 +1,386 @@
+{
+  "timestamp": "2025-07-09T01:13:27.704Z",
+  "summary": {
+    "totalReferences": 34,
+    "validImages": 34,
+    "missingImages": 0,
+    "optimizedImages": 19
+  },
+  "validImages": [
+    {
+      "path": "/assets/img/edunest-dark.svg",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/edunest-dark.webp",
+        "jpegPath": "/assets/img/optimized/edunest-dark.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/01-how-personalized-are-your-training-videos.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/01-how-personalized-are-your-training-videos.webp",
+        "jpegPath": "/assets/img/optimized/g/01-how-personalized-are-your-training-videos.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/02-how-does-your-video-content-adapt-to-different-learning-styles.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/02-how-does-your-video-content-adapt-to-different-learning-styles.webp",
+        "jpegPath": "/assets/img/optimized/g/02-how-does-your-video-content-adapt-to-different-learning-styles.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/03-how-interactive-are-your-training videos.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/03-how-interactive-are-your-training videos.webp",
+        "jpegPath": "/assets/img/optimized/g/03-how-interactive-are-your-training videos.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/how-does-your-system-handle-branching-scenarios.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/how-does-your-system-handle-branching-scenarios.webp",
+        "jpegPath": "/assets/img/optimized/g/how-does-your-system-handle-branching-scenarios.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/04-how-does-your-organization-use-synthetic-media(AI-generated-content).png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/04-how-does-your-organization-use-synthetic-media(AI-generated-content).webp",
+        "jpegPath": "/assets/img/optimized/g/04-how-does-your-organization-use-synthetic-media(AI-generated-content).jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/04-how-quickly can-you-create-new-training content.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/04-how-quickly can-you-create-new-training content.webp",
+        "jpegPath": "/assets/img/optimized/g/04-how-quickly can-you-create-new-training content.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/05-how-does-your-organization-address-ethical-concerns with-synthetic-media.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/05-how-does-your-organization-address-ethical-concerns with-synthetic-media.webp",
+        "jpegPath": "/assets/img/optimized/g/05-how-does-your-organization-address-ethical-concerns with-synthetic-media.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/g/how-transparent-are-you-about-using-AI-generated-content.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/g/how-transparent-are-you-about-using-AI-generated-content.webp",
+        "jpegPath": "/assets/img/optimized/g/how-transparent-are-you-about-using-AI-generated-content.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/Logo_del_Politecnico_Grancolombiano.svg",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/Logo_del_Politecnico_Grancolombiano.webp",
+        "jpegPath": "/assets/img/optimized/Logo_del_Politecnico_Grancolombiano.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/courses.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/courses.webp",
+        "jpegPath": "/assets/img/optimized/courses.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-5.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-5.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-5.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-7.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-7.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-7.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-8.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-8.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-8.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-4.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-4.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-4.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-6.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-6.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-6.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-11.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-11.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-11.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-12.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-12.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-12.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/01-process/old-flow.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/01-process/old-flow.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/01-process/old-flow.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/01-process/actions-by-user.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/01-process/actions-by-user.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/01-process/actions-by-user.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/01-process/users-access.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/01-process/users-access.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/01-process/users-access.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/01-process/new-flow.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/01-process/new-flow.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/01-process/new-flow.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/02-finished/Home-documentation.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/Home-documentation.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/Home-documentation.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/02-finished/mr-new-flow.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/mr-new-flow.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/mr-new-flow.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/material-receipt/02-finished/end-img.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/end-img.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/material-receipt/02-finished/end-img.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-10.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-10.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-10.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-1.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-1.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-1.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/portfolio/portfolio-2.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/portfolio/portfolio-2.webp",
+        "jpegPath": "/assets/img/optimized/portfolio/portfolio-2.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/misc/misc-1.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/misc/misc-1.webp",
+        "jpegPath": "/assets/img/optimized/misc/misc-1.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/services/3d_assistants.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/services/3d_assistants.webp",
+        "jpegPath": "/assets/img/optimized/services/3d_assistants.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/services/services-10.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/services/services-10.webp",
+        "jpegPath": "/assets/img/optimized/services/services-10.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/services/services-2.webp",
+      "exists": true,
+      "optimized": false,
+      "versions": {
+        "webp": false,
+        "jpeg": false,
+        "webpPath": "/assets/img/optimized/services/services-2.webp",
+        "jpegPath": "/assets/img/optimized/services/services-2.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/favicon.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/favicon.webp",
+        "jpegPath": "/assets/img/optimized/favicon.jpg"
+      }
+    },
+    {
+      "path": "/assets/img/apple-touch-icon.png",
+      "exists": true,
+      "optimized": true,
+      "versions": {
+        "webp": true,
+        "jpeg": true,
+        "webpPath": "/assets/img/optimized/apple-touch-icon.webp",
+        "jpegPath": "/assets/img/optimized/apple-touch-icon.jpg"
+      }
+    }
+  ],
+  "missingImages": []
+}

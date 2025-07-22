@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Testing - EduNest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .console-output {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .info { color: #17a2b8; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 EduNest Form Testing</h1>
+        <p>This page allows you to test the email service functionality and view console output.</p>
+        
+        <div class="test-section">
+            <h3>📊 Test Data</h3>
+            <div id="test-data-display"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔄 Form Submission Tests</h3>
+            <button onclick="testEmailJSFallback()">Test EmailJS Fallback</button>
+            <button onclick="testEmailJSMock()">Test EmailJS Mock</button>
+            <button onclick="testBackendAPI()">Test Backend API</button>
+            <button onclick="clearConsole()">Clear Console</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>📋 Console Output</h3>
+            <div id="console-output" class="console-output"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📖 Instructions</h3>
+            <ol>
+                <li>Open your browser's Developer Tools (F12)</li>
+                <li>Go to the Console tab</li>
+                <li>Click the test buttons above</li>
+                <li>Watch both the console output above and in Developer Tools</li>
+                <li>The "EmailJS Fallback" test should log data to console (expected behavior)</li>
+                <li>The "Backend API" test will fail (expected - no server running)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        // Test data
+        const testFormData = {
+            fullName: 'John Doe',
+            email: 'john.doe@example.com',
+            company: 'Tech Corp',
+            jobTitle: 'Senior Developer',
+            scheduleMeeting: true,
+            meetingDate: '2024-12-25',
+            meetingTime: '10:00-12:00',
+            subscribe: true
+        };
+        
+        const testScores = {
+            category1: 80, // AI Knowledge
+            category2: 65, // Implementation
+            category3: 90, // Strategy
+            category4: 75  // Future Planning
+        };
+        
+        const testAnswers = [
+            { question: 'What is AI?', answer: 'Artificial Intelligence systems', score: 40 },
+            { question: 'How to implement AI?', answer: 'Step by step approach', score: 40 },
+            { question: 'AI strategy importance?', answer: 'Critical for business', score: 35 },
+            { question: 'Implementation challenges?', answer: 'Data quality and skills', score: 25 },
+            { question: 'Future of AI?', answer: 'Widespread adoption', score: 45 },
+            { question: 'AI ethics?', answer: 'Very important consideration', score: 45 },
+            { question: 'ROI measurement?', answer: 'Track key metrics', score: 35 },
+            { question: 'Team preparation?', answer: 'Training and upskilling', score: 40 }
+        ];
+        
+        // Console output capture
+        const consoleOutput = document.getElementById('console-output');
+        const originalConsole = {
+            log: console.log,
+            warn: console.warn,
+            error: console.error
+        };
+        
+        function addToConsoleOutput(type, ...args) {
+            const timestamp = new Date().toLocaleTimeString();
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+            
+            const div = document.createElement('div');
+            div.className = type;
+            div.innerHTML = `[${timestamp}] ${type.toUpperCase()}: ${message}`;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            
+            // Also log to browser console
+            originalConsole[type](...args);
+        }
+        
+        console.log = (...args) => addToConsoleOutput('info', ...args);
+        console.warn = (...args) => addToConsoleOutput('error', ...args);
+        console.error = (...args) => addToConsoleOutput('error', ...args);
+        
+        // Display test data
+        document.getElementById('test-data-display').innerHTML = `
+            <strong>Form Data:</strong><br>
+            <pre>${JSON.stringify(testFormData, null, 2)}</pre>
+            <strong>Scores:</strong> ${JSON.stringify(testScores)}<br>
+            <strong>Total Score:</strong> ${Math.round(Object.values(testScores).reduce((a, b) => a + b, 0) / 8)}<br>
+            <strong>Number of Answers:</strong> ${testAnswers.length}
+        `;
+        
+        function clearConsole() {
+            consoleOutput.innerHTML = '';
+        }
+        
+        async function testEmailJSFallback() {
+            console.log('🔄 Testing EmailJS fallback (no EmailJS loaded)...');
+            
+            // Simulate the emailService fallback behavior
+            if (!window.emailjs) {
+                console.warn('EmailJS not loaded. Form data logged to console instead.');
+                console.log('Form Data:', { 
+                    formData: testFormData, 
+                    scores: testScores, 
+                    answers: testAnswers 
+                });
+                console.log('✅ Result: { status: 200, text: "Logged to console" }');
+            }
+        }
+        
+        async function testEmailJSMock() {
+            console.log('🔄 Testing with EmailJS mock...');
+            
+            // Mock EmailJS
+            window.emailjs = {
+                send: async (serviceId, templateId, params, publicKey) => {
+                    console.log('📧 EmailJS.send called with:');
+                    console.log('  Service ID:', serviceId);
+                    console.log('  Template ID:', templateId);
+                    console.log('  Public Key:', publicKey);
+                    console.log('  Template Parameters:', params);
+                    return { status: 200, text: 'Mock success' };
+                }
+            };
+            
+            // Simulate template parameters creation
+            const templateParams = {
+                user_name: testFormData.fullName,
+                user_email: testFormData.email,
+                user_company: testFormData.company,
+                user_job_title: testFormData.jobTitle,
+                total_score: Math.round(Object.values(testScores).reduce((a, b) => a + b, 0) / 8),
+                category1_score: Math.round(testScores.category1 / 2),
+                category2_score: Math.round(testScores.category2 / 2),
+                category3_score: Math.round(testScores.category3 / 2),
+                category4_score: Math.round(testScores.category4 / 2),
+                schedule_meeting: testFormData.scheduleMeeting ? 'Yes' : 'No',
+                meeting_date: testFormData.meetingDate,
+                meeting_time: testFormData.meetingTime,
+                subscribe_newsletter: testFormData.subscribe ? 'Yes' : 'No',
+                detailed_answers: testAnswers.map((answer, index) => 
+                    `Q${index + 1}: ${answer.answer} (Score: ${answer.score})`
+                ).join('\n'),
+                submission_date: new Date().toLocaleString()
+            };
+            
+            const result = await window.emailjs.send(
+                'test_service_id',
+                'test_template_id',
+                templateParams,
+                'test_public_key'
+            );
+            
+            console.log('✅ EmailJS mock result:', result);
+        }
+        
+        async function testBackendAPI() {
+            console.log('🔄 Testing Backend API (will fail - no server)...');
+            
+            try {
+                const response = await fetch('/api/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        formData: testFormData,
+                        scores: testScores,
+                        answers: testAnswers,
+                        submissionTime: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                console.log('✅ Backend API result:', result);
+            } catch (error) {
+                console.error('✅ Expected API error (no server running):', error.message);
+                console.log('📝 Form Data would be sent:', {
+                    formData: testFormData,
+                    scores: testScores,
+                    answers: testAnswers
+                });
+            }
+        }
+        
+        // Initialize
+        console.log('🎯 Form Testing Page Loaded');
+        console.log('📋 Test data prepared and ready for testing');
+    </script>
+</body>
+</html>
+
