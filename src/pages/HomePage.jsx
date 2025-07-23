@@ -8,7 +8,8 @@ import {
   trackButtonClick,
   trackContactClick,
   trackFormSubmission
-} from '../utils/analytics';
+} from '../utils/unifiedAnalytics';
+import ClarityTestComponent from '../components/ClarityTestComponent';
 import HeroBanner from '../components/HeroBanner';
 
 
@@ -643,6 +644,13 @@ const HomePage = () => {
 
 
       </section>
+
+      {/* Development Only - Clarity Test Component */}
+      {process.env.NODE_ENV === 'development' && (
+        <section className="container my-5">
+          <ClarityTestComponent />
+        </section>
+      )}
 
       {/* Rest of sections... */}
     </main>

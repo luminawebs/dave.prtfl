@@ -1,5 +1,5 @@
 // Automatic click tracking utility for elements without React handlers
-import { trackButtonClick, trackLinkClick, trackContactClick } from './analytics';
+import { trackButtonClick, trackLinkClick, trackContactClick } from './unifiedAnalytics';
 
 export const initializeAutoTracking = () => {
   // Wait for DOM to be fully loaded

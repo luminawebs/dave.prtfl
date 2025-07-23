@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { trackScroll, trackContactSectionView } from '../utils/analytics';
+import { trackScroll, trackContactSectionView } from '../utils/unifiedAnalytics';
 
 const useScrollTracking = () => {
   useEffect(() => {

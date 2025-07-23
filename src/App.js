@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { LanguageProvider } from './contexts/LanguageContext';
 import ConditionalLayout from './components/ConditionalLayout';
 import PageTracker from './components/PageTracker';
+import ErrorBoundary from './components/ErrorBoundary';
 import useScrollTracking from './hooks/useScrollTracking';
 
 import { initializeAutoTracking } from './utils/autoTracking';
+import { initializeAnalytics } from './utils/unifiedAnalytics';
 import LanguageRouter from './components/LanguageRouter';
 
 // Loading component
@@ -22,11 +24,10 @@ const LoadingSpinner = () => (
 // import ScrollComponent from "./components/ScrollComponent";
 
 function App() {
-  // Initialize scroll tracking
-  useScrollTracking();
-
-  // Remove preloader when component mounts and initialize tracking
+// Initialize analytics
   useEffect(() => {
+    initializeAnalytics();
+
     const preloader = document.getElementById('preloader');
     if (preloader) {
       // Add a small delay to ensure page is fully loaded
@@ -41,27 +42,32 @@ function App() {
     initializeAutoTracking();
   }, []);
 
+  // Initialize scroll tracking
+  useScrollTracking();
+
 
   return (
-    <LanguageProvider>
-      <Router>
-        <div className="App">
-          <PageTracker />
-          <ConditionalLayout>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path=":lang/*" element={<LanguageRouter />} />
-                <Route path="/" element={<Navigate to="/es/" replace />} />
-              </Routes>
-            </Suspense>
-          </ConditionalLayout>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <Router>
+          <div className="App">
+            <PageTracker />
+            <ConditionalLayout>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path=":lang/*" element={<LanguageRouter />} />
+                  <Route path="/" element={<Navigate to="/es/" replace />} />
+                </Routes>
+              </Suspense>
+            </ConditionalLayout>
 
-          {/* <!-- Preloader --> */}
-          <div id="preloader"></div>
+            {/* <!-- Preloader --> */}
+            <div id="preloader"></div>
 
-        </div>
-      </Router>
-    </LanguageProvider>
+          </div>
+        </Router>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 }
 
