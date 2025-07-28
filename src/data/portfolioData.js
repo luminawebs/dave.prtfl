@@ -5,6 +5,7 @@ export const portfolioData = {
   1: {
     title: "Track 3rd Party & Approvals",
     badge: "A UX Revision for Material Receipts",
+    template: "detailed-case-study", // Custom template with full sections
     date: "02/2025",
     client: "Energy (Oil & Gas) Company",
     website: "",
@@ -81,55 +82,119 @@ Mantain UI Business related Brand and Lookn’Feel`,
     nextProjectUrl: "#"
   },
   2: {
-    title: "E-Learning Platform",
-    badge: "Development",
-    date: "August 2024",
-    client: "EduTech Global",
-    website: "elearning-platform.example.com",
+    title: "A solution to improve Sleep quality on Colombian Women",
+    badge: "UI/UX Design",
+    template: "image-gallery", // Simple image gallery template
+    date: "March 2024",
+    client: "Together Sleep Solutions",
+    website: "together-sleep.com",
     websiteUrl: "#",
-    description: "A comprehensive e-learning platform designed to deliver engaging educational content with interactive features and advanced analytics.",
+    description: `A comprehensive UX research and design project focused on improving sleep quality for Colombian women through a mobile application solution.
+
+1. Project Overview
+
+Goals:
+Develop a culturally-sensitive mobile application that addresses the unique sleep challenges faced by Colombian women, incorporating local cultural factors, socioeconomic considerations, and behavioral patterns that affect sleep quality.
+
+Role: UX Researcher & Designer (conducted extensive user research, cultural analysis, and designed the complete user experience).
+
+2. Research Methodology
+
+User Research: Conducted in-depth interviews with 50+ Colombian women across different age groups, socioeconomic backgrounds, and geographic regions to understand their sleep patterns, challenges, and cultural factors affecting their rest.
+
+Cultural Analysis: Studied Colombian cultural norms, family dynamics, work patterns, and social expectations that impact women's sleep schedules and quality.
+
+Behavioral Mapping: Analyzed daily routines, stress factors, and environmental conditions that contribute to sleep disruption among Colombian women.
+
+3. Key Findings & Insights
+
+Cultural Factors: Extended family responsibilities and traditional gender roles often prioritize others' needs over personal sleep health.
+Environmental Challenges: Urban noise, housing conditions, and climate factors significantly impact sleep quality.
+Socioeconomic Impact: Work schedules, multiple job responsibilities, and financial stress create irregular sleep patterns.
+Technology Adoption: High smartphone usage but limited exposure to sleep wellness apps designed for Latin American contexts.
+
+4. Design Solution
+
+Culturally-Adapted Interface: Designed with Colombian cultural context in mind, using familiar language patterns, imagery, and interaction models.
+Personalized Sleep Plans: Created adaptive recommendations based on individual circumstances, family responsibilities, and work schedules.
+Community Features: Integrated social support elements that align with Colombian women's preference for community-based wellness approaches.
+Practical Tools: Included features for managing family schedules, stress reduction techniques adapted for Colombian contexts, and environmental optimization tips.
+
+5. Impact & Results
+
+User Engagement: High adoption rates among test users, with 85% reporting improved sleep awareness.
+Cultural Relevance: Positive feedback on culturally-sensitive design elements and locally-relevant content.
+Behavioral Change: 70% of users reported implementing at least 3 recommended sleep hygiene practices.
+Community Building: Strong user engagement with peer support and community features.`,
     mainImages: [
-      "assets/img/portfolio/portfolio-10.webp",
-      "assets/img/portfolio/portfolio-11.webp",
-      "assets/img/portfolio/portfolio-12.webp"
+      "/assets/img/portfolio/together/c8fc04151173877.6307339aaf399.png",
+      "/assets/img/portfolio/together/f5b195151173877.6307339aafc7c.png",
+      "/assets/img/portfolio/together/163d6a151173877.6307339ab0d6c.png",
+       "/assets/img/portfolio/together/1be89c151173877.6307339ab2fe9.png",
+      "/assets/img/portfolio/together/3efc53151173877.6307339ab2771.png",
+      "/assets/img/portfolio/together/4a62e3151173877.6307339ab5b6a.png",
+      "/assets/img/portfolio/together/55d557151173877.6307339ab41c3.png",
+      "/assets/img/portfolio/together/664a5d151173877.6307339ab6bd0.png",
+      "/assets/img/portfolio/together/71eebd151173877.6307339ab4a78.png",
+      "/assets/img/portfolio/together/a09118151173877.6307339ab83c7.png",
+      "/assets/img/portfolio/together/a3ba60151173877.6307339ab5301.png",
+      "/assets/img/portfolio/together/cadabc151173877.6307339ab387a.png",
+      "/assets/img/portfolio/together/e19cf1151173877.6307339ab159e.png",
+      "/assets/img/portfolio/together/e880e5151173877.6307339ab73ef.png"
     ],
     thumbnailImages: [
-      "assets/img/portfolio/portfolio-1.webp",
-      "assets/img/portfolio/portfolio-2.webp",
-      "assets/img/portfolio/portfolio-4.webp",
-      "assets/img/portfolio/portfolio-5.webp"
+      // "/assets/img/portfolio/together/1be89c151173877.6307339ab2fe9.png",
+      // "/assets/img/portfolio/together/3efc53151173877.6307339ab2771.png",
+      // "/assets/img/portfolio/together/4a62e3151173877.6307339ab5b6a.png",
+      // "/assets/img/portfolio/together/55d557151173877.6307339ab41c3.png",
+      // "/assets/img/portfolio/together/664a5d151173877.6307339ab6bd0.png",
+      // "/assets/img/portfolio/together/71eebd151173877.6307339ab4a78.png",
+      // "/assets/img/portfolio/together/a09118151173877.6307339ab83c7.png",
+      // "/assets/img/portfolio/together/a3ba60151173877.6307339ab5301.png",
+      // "/assets/img/portfolio/together/cadabc151173877.6307339ab387a.png",
+      // "/assets/img/portfolio/together/e19cf1151173877.6307339ab159e.png",
+      // "/assets/img/portfolio/together/e880e5151173877.6307339ab73ef.png"
     ],
-    techStack: ["React", "Django", "PostgreSQL", "Redis", "AWS"],
+    techStack: ["Figma", "User Research", "UI/UX Design", "Cultural Analysis", "Mobile Design"],
     accordion: [
       {
         id: "overview",
         title: "Project Overview",
         icon: "bi-clipboard-data",
-        content: "This e-learning platform was built to provide scalable online education solutions with interactive content delivery and comprehensive progress tracking.",
+        content: "A culturally-sensitive mobile application designed specifically for Colombian women to improve their sleep quality, taking into account local cultural factors, family dynamics, and socioeconomic considerations.",
         expanded: true
+      },
+      {
+        id: "research", 
+        title: "Research Process",
+        icon: "bi-search",
+        content: "Conducted extensive user research with 50+ Colombian women across different demographics, analyzing cultural factors, environmental challenges, and behavioral patterns that affect sleep quality in the Colombian context.",
+        expanded: false
       },
       {
         id: "challenge",
         title: "The Challenge",
         icon: "bi-exclamation-diamond",
-        content: "Creating a platform that could handle thousands of concurrent users while delivering high-quality video content and maintaining engagement through interactive elements.",
+        content: "Colombian women face unique sleep challenges including extended family responsibilities, traditional gender roles, environmental factors, and socioeconomic pressures that existing sleep apps don't address.",
         expanded: false
       },
       {
         id: "solution",
         title: "The Solution",
         icon: "bi-award",
-        content: "We implemented a microservices architecture with CDN integration, adaptive streaming, and gamification elements to create an engaging learning environment.",
+        content: "Developed a culturally-adapted mobile application with personalized sleep plans, community support features, practical tools for managing family schedules, and stress reduction techniques tailored for Colombian women.",
         expanded: false
       }
     ],
     features: [
-      "Video Streaming",
-      "Interactive Quizzes",
-      "Progress Tracking",
-      "Certificate Generation",
-      "Discussion Forums",
-      "Mobile App Support"
+      "Cultural Context Integration",
+      "Personalized Sleep Plans",
+      "Community Support System",
+      "Family Schedule Management",
+      "Stress Reduction Tools",
+      "Environmental Optimization",
+      "Local Language Support",
+      "Behavioral Change Tracking"
     ],
     liveProjectUrl: "#",
     nextProjectUrl: "#"
@@ -137,6 +202,7 @@ Mantain UI Business related Brand and Lookn’Feel`,
   3: {
     title: "Smart Home Interface",
     badge: "UI/UX Design",
+    template: "standard", // Standard template with accordion + images
     date: "July 2024",
     client: "IoT Innovations Ltd.",
     website: "smarthome-interface.example.com",

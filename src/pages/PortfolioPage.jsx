@@ -135,16 +135,16 @@ const PortfolioPage = () => {
               <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
                 <article className="portfolio-entry" onClick={() => handleProjectClick(2)}>
                   <figure className="entry-image">
-                    <img src="/assets/img/portfolio/material-receipt/02-finished/end-img.png" className="img-fluid" alt="" loading="lazy" />
+                    <img src="/assets/img/portfolio/together/61c5f6151173877.Y3JvcCw0MjkwLDMzNTUsNDM1LDA-500.png" className="img-fluid" alt="" loading="lazy" />
                     <div className="overlay-content">
                       <div className="entry-meta">UI/UX Design</div>
-                      <h3 className="entry-title">A UX Overhaul for Material Receipts</h3>
+                      <h3 className="entry-title">A solution to improve Sleep quality on Colombian Women</h3>
                       <div className="entry-links">
                         {/* <a href="assets/img/portfolio/material-receipt/02-finished/end-img.png" className="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
                           <i className="bi bi-arrows-angle-expand"></i>
                         </a> */}
                         <button
-                          onClick={() => handleProjectClick(1)}
+                          onClick={() => handleProjectClick(2)}
                           style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
                         >
                           <i className="bi bi-arrow-right"></i>
