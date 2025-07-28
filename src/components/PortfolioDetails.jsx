@@ -66,7 +66,7 @@ const PortfolioDetails = () => {
     nextProjectUrl: "#"
   };
 
-const project = resolvedData || defaultData;
+  const project = resolvedData || defaultData;
   // keep backward-compat alias so existing code that references projectData still works
   const projectData = project;
   const { t } = useTranslation();
@@ -248,14 +248,14 @@ const project = resolvedData || defaultData;
 
                     <p className="lead"> Collaboration: </p>
                     <p>Bridged gaps between devs and Product Owner to fit time requirements, technology capabilities, best methodology, solve all questions that could have remained.</p>
-                 
-                   <h3 style={{ marginTop: '120px' }}><i className="bi bi-search me-2"></i>Heuristic Review:</h3>
-                          <ul>
-                            <li>Navigation issues (breadcrumbs)</li>
-                            <li>Consistency (language)</li>
-                            <li>Feedback loops (notifications)</li>
-                            <li>New Material Receipts hierarchy requirements</li>
-                          </ul>
+
+                    <h3 style={{ marginTop: '120px' }}><i className="bi bi-search me-2"></i>Heuristic Review:</h3>
+                    <ul>
+                      <li>Navigation issues (breadcrumbs)</li>
+                      <li>Consistency (language)</li>
+                      <li>Feedback loops (notifications)</li>
+                      <li>New Material Receipts hierarchy requirements</li>
+                    </ul>
                   </section>
                 </div>
 
@@ -307,7 +307,7 @@ const project = resolvedData || defaultData;
                         <div className="col-lg-6">
                           <div style={{ backgroundColor: '#fff', padding: '0px', borderRadius: '10px', height: '100%', alignContent: 'center' }}>
                             <div className="ratio ratio-1x1">
-                              <iframe 
+                              <iframe
                                 src="https://iframe.mediadelivery.net/embed/354319/fe1d0cfb-0e9d-449b-8c03-35fcf11ba91a?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
                                 loading="lazy"
                                 style={{ border: '0px' }}
@@ -492,11 +492,14 @@ const project = resolvedData || defaultData;
                   <div className="row g-3">
                     {project.mainImages.map((image, index) => (
                       <div key={index} className="col-lg-12 col-md-6" style={{ margin: '0px' }}>
-                          <div style={{ backgroundColor: '#f8f9fa', padding: '0px', borderRadius: '10px', height: '100%', margin: '0 auto' }}>
-                            <img src={image} className="img-fluid" alt={`Project Image ${index + 1}`} />
-                          </div>
+                        <div style={{ backgroundColor: '#f8f9fa', padding: '0px', borderRadius: '10px', height: '100%', margin: '0 auto' }}>
+                          <img src={image} className="img-fluid" alt={`Project Image ${index + 1}`} />
+                        </div>
                       </div>
                     ))}
+                  </div>
+                  <div className="row g-3">
+                    <iframe width="800" height="800" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeNuYCI6PZyU3DefLtfxq48%2FPrototipo-Sleep01%3Fpage-id%3D0%253A1%26node-id%3D176%253A537%26viewport%3D671%252C433%252C0.03%26scaling%3Dscale-down%26starting-point-node-id%3D176%253A537" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                   </div>
                 </div>
               </div>

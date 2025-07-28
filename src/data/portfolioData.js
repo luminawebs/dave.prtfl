@@ -100,7 +100,7 @@ Role: UX Researcher & Designer (conducted extensive user research, cultural anal
 
 2. Research Methodology
 
-User Research: Conducted in-depth interviews with 50+ Colombian women across different age groups, socioeconomic backgrounds, and geographic regions to understand their sleep patterns, challenges, and cultural factors affecting their rest.
+User Research: Conducted in-depth interviews with 200 Colombian women across different age groups, socioeconomic backgrounds, and geographic regions to understand their sleep patterns, challenges, and cultural factors affecting their rest.
 
 Cultural Analysis: Studied Colombian cultural norms, family dynamics, work patterns, and social expectations that impact women's sleep schedules and quality.
 
@@ -127,20 +127,23 @@ Cultural Relevance: Positive feedback on culturally-sensitive design elements an
 Behavioral Change: 70% of users reported implementing at least 3 recommended sleep hygiene practices.
 Community Building: Strong user engagement with peer support and community features.`,
     mainImages: [
-      "/assets/img/portfolio/together/c8fc04151173877.6307339aaf399.png",
-      "/assets/img/portfolio/together/f5b195151173877.6307339aafc7c.png",
-      "/assets/img/portfolio/together/163d6a151173877.6307339ab0d6c.png",
-       "/assets/img/portfolio/together/1be89c151173877.6307339ab2fe9.png",
-      "/assets/img/portfolio/together/3efc53151173877.6307339ab2771.png",
-      "/assets/img/portfolio/together/4a62e3151173877.6307339ab5b6a.png",
-      "/assets/img/portfolio/together/55d557151173877.6307339ab41c3.png",
-      "/assets/img/portfolio/together/664a5d151173877.6307339ab6bd0.png",
-      "/assets/img/portfolio/together/71eebd151173877.6307339ab4a78.png",
-      "/assets/img/portfolio/together/a09118151173877.6307339ab83c7.png",
       "/assets/img/portfolio/together/a3ba60151173877.6307339ab5301.png",
-      "/assets/img/portfolio/together/cadabc151173877.6307339ab387a.png",
-      "/assets/img/portfolio/together/e19cf1151173877.6307339ab159e.png",
-      "/assets/img/portfolio/together/e880e5151173877.6307339ab73ef.png"
+      "/assets/img/portfolio/together/93cbe4151173877.6307339ab1eb9.png",
+      "/assets/img/portfolio/together/a09118151173877.6307339ab83c7.png",
+      "/assets/img/portfolio/together/e19cf1151173877.6307339ab159e.png", //
+      "/assets/img/portfolio/together/4a62e3151173877.6307339ab5b6a.png", //
+      "/assets/img/portfolio/together/664a5d151173877.6307339ab6bd0.png", //
+      "/assets/img/portfolio/together/e880e5151173877.6307339ab73ef.png", //
+      "/assets/img/portfolio/together/55d557151173877.6307339ab41c3.png", //
+      "/assets/img/portfolio/together/71eebd151173877.6307339ab4a78.png", //
+       "/assets/img/portfolio/together/1be89c151173877.6307339ab2fe9.png", //
+      "/assets/img/portfolio/together/3efc53151173877.6307339ab2771.png", //
+      "/assets/img/portfolio/together/f5b195151173877.6307339aafc7c.png",
+      "/assets/img/portfolio/together/c8fc04151173877.6307339aaf399.png",
+      "/assets/img/portfolio/together/9437bb151173877.6307339ab7bee.png",
+      "/assets/img/portfolio/together/163d6a151173877.6307339ab0d6c.png", //
+      "/assets/img/portfolio/together/cadabc151173877.6307339ab387a.png", //
+      "/assets/img/portfolio/together/59d244151173877.6307339ab0507.png", //
     ],
     thumbnailImages: [
       // "/assets/img/portfolio/together/1be89c151173877.6307339ab2fe9.png",
