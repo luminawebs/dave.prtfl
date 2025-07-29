@@ -1,58 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { trackButtonClick } from '../utils/analytics';
+import { useTranslation } from '../hooks/useTranslation';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const HeroBanner = () => {
+  const { t } = useTranslation();
+  const { language, getLocalizedPath } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Slide data with variations of SOLUCIONES ELEARNING content and corresponding media
-  const slides = [
-
-    {
-      id: 0,
-      mainHeading: "Cursos en Articulate & HTML5 e AI",
-      description: "Diseñamos contenido pedagógico con avatares 3D y plataformas ágiles que revolucionan la educación digital.",
-      highlight: "revolucionan",
-      mediaType: "image", // You can change this to "image" or "video" when you have the actual media
-      mediaSrc: "/assets/img/courses.png", // Placeholder path
-      mediaAlt: "Avatares 3D revolucionarios",
-      mediaTitle: "Tecnología que Revoluciona",
-      cta: {
-        text: "Ver Cursos",
-        url: "/es/courses",
-        icon: "bi-book"
-      }
-    },
-    {
-      id: 1,
-      mainHeading: "iNTEGRACIÓN LMS",
-      description: "Conectamos tus cursos con Moodle, Blackboard, Canvas y otros sistemas. Reportes de progreso automáticos y certificación SCORM/xAPI.",
-      highlight: "automáticos",
-      mediaType: "image", // You can change this to "image" or "video" when you have the actual media
-      mediaSrc: "/assets/img/lms.png", // Placeholder path
-      mediaAlt: "Integración LMS",
-      mediaTitle: "Integración Perfecta",
-      cta: {
-        text: "Ver Integraciones",
-        url: "/es/lmspricing",
-        icon: "bi-link-45deg"
-      }
-    },
-    {
-      id: 2,
-      mainHeading: "3D AVATARS",
-      description: 'Avatares virtuales económicos que guían a los estudiantes, explican conceptos complejos y hacen el aprendizaje más cercano y memorable.',
-      highlight: "memorable",
-      mediaType: "video", // "image", "video", or "iframe"
-      mediaSrc: "https://iframe.mediadelivery.net/embed/354319/33fc09af-d689-4669-8c79-82816f38f0a7?autoplay=true&loop=false&muted=false&preload=true&responsive=true",
-      mediaAlt: "Video ejemplo de experiencias interactivas",
-      mediaTitle: "Experiencias Interactivas 3D",
-      cta: {
-        text: "Ver Demo",
-        url: "/es/personajes3d",
-        icon: "bi-play-circle"
-      }
+  // Get internationalized slide data from translations
+  const slides = t('hero.carousel.slides').map((slide, index) => ({
+    id: index,
+    mainHeading: slide.mainHeading,
+    description: slide.description,
+    highlight: slide.highlight,
+    mediaType: slide.mediaType,
+    mediaSrc: slide.mediaSrc,
+    mediaAlt: slide.mediaAlt,
+    mediaTitle: slide.mediaTitle,
+    cta: {
+      text: slide.cta.text,
+      url: getLocalizedPath(slide.cta.url.replace(/\/(es|en)/, '')), // Remove language prefix and apply current language
+      icon: slide.cta.icon
     }
-  ];
+  }));
 
   // Auto-rotate slides every 5 seconds
   useEffect(() => {
@@ -84,7 +55,7 @@ const HeroBanner = () => {
           <button
             className="carousel-control prev"
             onClick={handlePrevSlide}
-            aria-label="Slide anterior"
+            aria-label={t('hero.carousel.controls.prevLabel')}
           >
             <i className="bi bi-chevron-left"></i>
           </button>
@@ -218,7 +189,7 @@ const HeroBanner = () => {
           <button
             className="carousel-control next"
             onClick={handleNextSlide}
-            aria-label="Siguiente slide"
+            aria-label={t('hero.carousel.controls.nextLabel')}
           >
             <i className="bi bi-chevron-right"></i>
           </button>
@@ -231,7 +202,7 @@ const HeroBanner = () => {
               key={index}
               className={`indicator ${index === currentSlide ? 'active' : ''}`}
               onClick={() => handleSlideChange(index)}
-              aria-label={`Ir a slide ${index + 1}`}
+              aria-label={`${t('hero.carousel.controls.indicatorLabel')} ${index + 1}`}
             />
           ))}
         </div>

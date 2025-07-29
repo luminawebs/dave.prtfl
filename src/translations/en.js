@@ -23,25 +23,148 @@ export const en = {
   hero: {
     agency: 'LUMINA INTERACTIVE',
     mainHeading: 'ELEARNING SOLUTIONS',
-    description: 'We transform your content into interactive experiences. Create courses that stand out in the competitive world of online learning.',
+    description: 'Transform your content into interactive experiences. Create courses that stand out in the competitive world of online learning.',
     ctaButton: 'VIEW SERVICES',
-    statsLabel: 'Implemented Courses'
+    statsLabel: 'Implemented Courses',
+    carousel: {
+      slides: [
+        {
+          mainHeading: "Courses in Articulate, HTML5 & AI",
+          description: "Designed pedagogical content with 3D avatars and agile platforms that revolutionize digital education.",
+          highlight: "revolutionize",
+          mediaType: "image",
+          mediaSrc: "/assets/img/courses.png",
+          mediaAlt: "Revolutionary 3D Avatars",
+          mediaTitle: "Technology that Revolutionizes",
+          cta: {
+            text: "View Courses",
+            url: "/en/courses",
+            icon: "bi-book"
+          }
+        },
+        {
+          mainHeading: "LMS INTEGRATION",
+          description: "Connect your courses with Moodle, Blackboard, Canvas and other systems. Automatic progress reports and SCORM/xAPI certification.",
+          highlight: "automatic",
+          mediaType: "image",
+          mediaSrc: "/assets/img/lms.png",
+          mediaAlt: "LMS Integration",
+          mediaTitle: "Perfect Integration",
+          cta: {
+            text: "View Integrations",
+            url: "/en/lmspricing",
+            icon: "bi-link-45deg"
+          }
+        },
+        {
+          mainHeading: "3D AVATARS",
+          description: "Affordable virtual avatars that guide students, explain complex concepts and make learning more personal and memorable.",
+          highlight: "memorable",
+          mediaType: "video",
+          mediaSrc: "https://iframe.mediadelivery.net/embed/354319/33fc09af-d689-4669-8c79-82816f38f0a7?autoplay=true&loop=false&muted=false&preload=true&responsive=true",
+          mediaAlt: "Example video of interactive experiences",
+          mediaTitle: "3D Interactive Experiences",
+          cta: {
+            text: "View Demo",
+            url: "/en/personajes3d",
+            icon: "bi-play-circle"
+          }
+        }
+      ],
+      controls: {
+        prevLabel: "Previous slide",
+        nextLabel: "Next slide",
+        indicatorLabel: "Go to slide"
+      }
+    }
   },
 
   // About Section
   about: {
     title: 'About Us',
     subtitle: 'Learn more',
-    subtitleHighlight: 'about my mission',
-    yearsExperience: 'Years in Digital Education',
-    mainTitle: 'Transforming Education with Innovative Technology',
-    leadText: 'We design personalized eLearning solutions that simplify course creation and improve the learning experience.',
-    description: 'We combine pedagogy, interactive design, and advanced technology to help universities and educators excel in the digital age.',
-    integralSupport: 'Comprehensive Support',
-    integralSupportDesc: 'Our specialized team accompanies every stage, from design to implementation of your courses.',
-    pedagogicalTech: 'Pedagogical Technology',
-    pedagogicalTechDesc: 'We use innovative tools (like 3D characters and agile platforms) to maximize student engagement.',
-    ctaButton: 'Discover my Solutions'
+    subtitleHighlight: 'about our experience',
+    yearsExperience: '5+ Years in Digital Education',
+    mainTitle: 'UI/UX Developer Learning Experience Designer',
+    leadText: 'With a Master\'s in Innovation and over 5 years of UI/UX experience, I specialize in designing eLearning solutions that transform digital education.',
+    description: 'As a SCRUM Master I (PSM I) professional with specialization in Strategic Design Management, I combine Design Thinking methodologies with advanced technologies to create user-centered learning experiences.',
+    professionalExperience: {
+      title: 'Professional Experience',
+      roles: [
+        {
+          company: 'Lúmina Interactiva',
+          position: 'Learning Experience Designer (LxD)',
+          period: 'Mar 2025 - Present',
+          location: 'Bogotá, Colombia',
+          description: 'Design and development of intuitive and user-centered learning platforms. Integration and coordination of advanced educational technologies.'
+        },
+        {
+          company: 'Capgemini',
+          position: 'UI/UX Developer',
+          period: 'Jul 2023 - Mar 2025',
+          location: 'Bogotá, Colombia',
+          description: 'Leadership in UX/UI design initiatives as part of the SLB (Schlumberger) team. Implementation of user-centered digital solutions.'
+        },
+        {
+          company: 'Dominio Estudio de Diseño',
+          position: 'Web Development & UI Design Instructor',
+          period: 'Oct 2022 - Jul 2023',
+          location: 'Bogotá, Colombia',
+          description: 'Training in web development and interface design. Use of HTML, CSS, and JavaScript in educational projects.'
+        },
+        {
+          company: 'Sii Group',
+          position: 'UI/UX Designer',
+          period: 'Mar 2022 - Jul 2023',
+          location: 'Bogotá, Colombia',
+          description: 'Development of user experiences and intuitive interface design for OnepayApp.'
+        },
+        {
+          company: 'Universidad EAN',
+          position: 'Multimedia Coordinator',
+          period: 'Oct 2016 - Oct 2019',
+          location: 'Bogotá, Colombia',
+          description: 'Coordination of multimedia projects, interface design, and management of virtual learning platforms.'
+        }
+      ]
+    },
+    skills: {
+      title: 'Technical Specialties',
+      list: [
+        'CSS Flexbox & LESS',
+        'Design Thinking & Prototyping',
+        'HTML5, JavaScript, Angular, React',
+        'UX Research & User Testing',
+        'SCORM & xAPI Integration',
+        'Articulate Storyline & Rise'
+      ]
+    },
+    sectors: {
+      title: 'Experience Sectors',
+      list: [
+        'Banking and Financial Services',
+        'Energy (Oil & Gas)',
+        'Higher Education',
+        'E-learning and EdTech'
+      ]
+    },
+    education: {
+      title: 'Academic Formation',
+      masters: 'Master in Innovation - Universidad EAN',
+      specialization: 'Specialization in Strategic Design Management',
+      degree: 'Professional in Graphic Design - Fundación Universitaria del Área Andina',
+      certifications: [
+        'Master Digital Product Design: UX Research & UI Design',
+        'Professional SCRUM Master I (PSM I)',
+        'UX User Testing',
+        'Quickstart AngularJS'
+      ]
+    },
+    integralSupport: 'Agile Methodology',
+    integralSupportDesc: 'We apply SCRUM and Design Thinking methodologies to deliver projects in record time with professional quality.',
+    pedagogicalTech: 'User-Centric Approach',
+    pedagogicalTechDesc: 'We design user-centered experiences, using research, testing, and prototyping to maximize engagement.',
+    ctaButton: 'View Portfolio'
   },
 
   // Services Section

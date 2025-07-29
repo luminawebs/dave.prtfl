@@ -62,7 +62,7 @@ const ClarityTestComponent = () => {
   };
 
   return (
-    <div className="card mt-4 border-info">
+    <div className="card mt-4 border-info" style={{ display: 'none' }}>
       <div className="card-header bg-info text-white">
         <h5 className="mb-0">
           <i className="fas fa-flask me-2"></i>
