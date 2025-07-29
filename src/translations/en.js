@@ -167,6 +167,134 @@ export const en = {
     ctaButton: 'View Portfolio'
   },
 
+  // Professional Experience Section
+  experience: {
+    title: 'Professional Experience',
+    subtitle: 'My professional',
+    subtitleHighlight: 'trajectory',
+    description: 'Over 5 years building innovative digital solutions in key sectors such as education, banking, and energy.',
+    roles: [
+      {
+        company: 'Lúmina Interactiva',
+        position: 'Learning Experience Designer (LxD)',
+        period: 'March 2025 - Present',
+        duration: '5 months',
+        location: 'Bogotá, Capital District, Colombia',
+        description: 'Design and development of intuitive and user-centered learning experiences, integrating advanced educational technologies.',
+        achievements: [
+          'Coordination of educational innovation projects',
+          'Integration of advanced LXD technologies',
+          'Development of personalized learning platforms'
+        ],
+        technologies: ['Design Thinking', 'LXD', 'User Research', 'Prototyping']
+      },
+      {
+        company: 'Capgemini',
+        position: 'UI/UX Developer',
+        period: 'July 2023 - March 2025',
+        duration: '1 year 9 months',
+        location: 'Bogotá, D.C., Capital District, Colombia',
+        description: 'Leadership of UX/UI design initiatives as part of the SLB (Schlumberger) team. Delivery of user-centered digital experiences for various web and mobile applications.',
+        achievements: [
+          'Collaboration with cross-functional teams on UX/UI projects',
+          'Execution of design sprints for wireframes and high-fidelity prototypes',
+          'UX improvement through iterative testing and user feedback',
+          'Implementation of UI solutions based on research and best practices'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Angular', 'UX Research']
+      },
+      {
+        company: 'Dominio Estudio de Diseño',
+        position: 'Web Development & UI Design Instructor',
+        period: 'October 2022 - July 2023',
+        duration: '10 months',
+        location: 'Bogotá, Capital District, Colombia',
+        description: 'Professional instructor in web development and interface design as part of the "Software Application Development and Training Course Creation for Web Developers" project.',
+        achievements: [
+          'Programming Introduction & Version Control (GIT) Modules - 15 hours',
+          'Advanced Version Control (GIT) - 15 hours',
+          'HTML & CSS3 (CSS Grid and Flexbox) - 30 hours',
+          'Accessible Interface Design - 16 hours',
+          'CSS Preprocessors (SASS, Less, PostCSS) - 30 hours',
+          'Template Frameworks (Bootstrap) - 15 hours'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'GIT', 'Bootstrap', 'SASS', 'LESS']
+      },
+      {
+        company: 'Sii Group',
+        position: 'UI/UX Designer',
+        period: 'March 2022 - July 2023',
+        duration: '1 year 5 months',
+        location: 'Bogotá, Distrito Capital, Colombia',
+        description: 'Ensured that each proposed step that a user will experience in their interaction with the finished product fits the needs of these users, accompanying the overall vision created by the proposed structure of the Onepay app from the Transbank Chile team.',
+        achievements: [
+          'Design of customer-centered user experiences',
+          'Direct collaboration with Transbank Chile',
+          'Optimization of user flows for OnepayApp'
+        ],
+        technologies: ['UI Design', 'UX Research', 'Prototyping', 'User Testing']
+      },
+      {
+        company: 'BRM S.A.',
+        position: 'Creative Technologist',
+        period: 'January 2022 - March 2022',
+        duration: '3 months',
+        location: 'Bogotá, Distrito Capital, Colombia',
+        description: 'Development of information technology solutions for digital innovation projects at Procolombia. Collaboration with production and marketing departments.',
+        achievements: [
+          'Software prototype design',
+          'Improvement of digital user experiences',
+          'Participation in Procolombia projects and their digital products'
+        ],
+        technologies: ['Digital Innovation', 'Prototyping', 'UX Design']
+      },
+      {
+        company: 'Universidad La Gran Colombia',
+        position: 'Associate Professional - Vice-rectory of Innovation and Entrepreneurship',
+        period: 'October 2021 - January 2022',
+        duration: '4 months',
+        location: 'Bogotá, Distrito Capital, Colombia',
+        description: 'Coordination and creation of Innovation, UX and UI projects related to education. Creation of Virtual Learning Environments and content for Entrepreneurship and Innovation courses.',
+        achievements: [
+          'User-centered design based methodology',
+          'Design thinking implementation',
+          'Educational project execution methodologies'
+        ],
+        technologies: ['Design Thinking', 'UX/UI', 'E-learning', 'Innovation']
+      },
+      {
+        company: 'Universidad EAN',
+        position: 'Multimedia Coordinator & Web Designer',
+        period: 'October 2016 - October 2019',
+        duration: '3 years 1 month',
+        location: 'Bogotá',
+        description: 'Coordination and direction of multimedia projects, web development with HTML5, CSS3, LESS, JavaScript, jQuery, Bootstrap. Creation of interactive resources and coordination of e-learning teams.',
+        achievements: [
+          'Blackboard platform management',
+          'University nomination in the innovation field',
+          'Improvement of internal operational processes in virtuality',
+          'Creation of virtual teaching modules (e-learning)'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Bootstrap', 'LESS', 'Blackboard']
+      }
+    ],
+    stats: {
+      experience: '5+',
+      experienceLabel: 'Years of Experience',
+      projects: '100+',
+      projectsLabel: 'Completed Projects',
+      sectors: '4',
+      sectorsLabel: 'Industry Sectors',
+      certifications: '10+',
+      certificationsLabel: 'Certifications'
+    },
+    heroTitle: 'Professional Experience',
+    heroSubtitle: 'A complete journey through my professional career, achievements, and the technologies I have mastered along the way.',
+    achievements: 'Key Achievements',
+    technologies: 'Technologies and Tools',
+    cta: 'Let\'s talk about your next project'
+  },
+
   // Services Section
   services: {
     title: 'Solutions',
