@@ -1,30 +1,3 @@
-var angleStart = -360;
-
-// jquery rotate animation
-function rotate(li,d) {
-    $({d:angleStart}).animate({d:d}, {
-        step: function(now) {
-            $(li)
-               .css({ transform: 'rotate('+now+'deg)' })
-               .find('label')
-                  .css({ transform: 'rotate('+(-now)+'deg)' });
-        }, duration: 0
-    });
-}
-
-// show / hide the options
-function toggleOptions(s) {
-    $(s).toggleClass('open');
-    var li = $(s).find('li');
-    var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
-    for(var i=0; i<li.length; i++) {
-        var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
-        $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
-    }
-}
-
-$('.selector button').click(function(e) {
-    toggleOptions($(this).parent());
-});
-
-setTimeout(function() { toggleOptions('.selector'); }, 100);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ad8ff5400b5ac19bf4591e2dda7696c8f1326f1bb1dd6c26d4779a0472b32b6
+size 861

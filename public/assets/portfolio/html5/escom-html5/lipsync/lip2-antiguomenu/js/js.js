@@ -1,19 +1,3 @@
-/*Animacion Inicial*/
-TweenMax.staggerFrom($("div"), 1.2, {opacity:0, y:"+=800px", delay:0, ease:Back.easeOut}, 0.1);
-
-
-t = TweenLite.to($("#bocadillo"), 1, { left:"1300px", rotation:90, ease:Back.easeOut }).reversed(true);
-
-function mensaje(msj){
-	parent.postMessage(msj, "*");
-}
-
-function toggleDirection() {
-  t.reversed( !t.reversed() );
-}
-
-
-
-$("#triggerBocadillo").click(function(){
-  toggleDirection();
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0fb3c33790401f0e8631f1a215ece5380ccdfdc6aa64d563844b5da108791289
+size 432

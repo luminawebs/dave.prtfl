@@ -1,18 +1,3 @@
-/*Animacion Inicial*/
-TweenMax.staggerFrom($("div"), 1.2, {opacity:0, y:"+=800px", delay:0, ease:Back.easeOut}, 0.1);
-
-
-
-function mensaje(msj){
-	parent.postMessage(msj, "*");
-}
-
-
-function izquierda(){
-TweenMax.to($(".mensajes"), 1, { y:"+=200", ease:Back.easeOut });
-}
-
-
-function derecha(){
-TweenMax.to($(".mensajes"), 1, { y:"-=200", ease:Back.easeOut });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b16715a86ef9a84bd2b21e064aefb1124c37cdce502ebde57cf50446fa0a7ad1
+size 375
