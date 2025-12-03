@@ -1,1 +1,1 @@
-public/assets/portfolio/* filter=lfs diff=lfs merge=lfs -text
+public/assets/portfolio/** filter=lfs diff=lfs merge=lfs -text
