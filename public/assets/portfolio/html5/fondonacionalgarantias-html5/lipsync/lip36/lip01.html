@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lip01</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+
+</head>
+
+<body style="background-color:transparent, margin:0px; overflow: hidden;">
+
+
+<div class="hover">
+	<div class="pop" id="bien01">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		<div><h1>¡Muy bien!</h1> Su fin es medir el grado de satisfacción en relación con los productos de garantía, la calidad, la oportunidad, sus colaboradores y en general, con el servicio ofrecido por el Fondo Nacional de Garantías. </div>
+	</div>
+	<div class="pop" id="bien02">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		<div><h1>¡Muy bien!</h1> Está dirigido a los colaboradores del Fondo Nacional de Garantías que hacen uso de los servicios internos que ofrece la entidad. Esta medición es anual.</div>
+	</div>
+	<div class="pop" id="bien03">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		<div><h1>¡Muy bien!</h1> Los ciudadanos, deudores, beneficiarios  y otros grupos de interés son encuestados para determinar el nivel de satisfacción de los servicios y atención brindada. </div>
+	</div>
+	<div class="pop" id="mal"  onclick="cerrarPop();">
+		<div class="cerrar"><strong>X</strong></div>
+		<div><h1>Incorrecto</h1>  Recuerda que el Fondo Nacional de Garantías realiza estudios de satisfacción a los clientes internos, externos, y en general, los grupos de interés. </div>
+	</div>
+</div>
+
+	<div class="contain">
+
+		<div class="tit"><img src="imgs/tit.png"></div>
+		<div class="contenedor-cont">
+			<div class="img"><img src="imgs/pregunta01.png"></div>
+
+			<div class="preguntas">
+				<div class="btns" onclick="correcto('#bien01', 0);"><img src="imgs/v.png"></div>
+				<div class="btns" onclick="incorrecto();"><img src="imgs/f.png"></div>
+			</div>
+
+		</div>
+
+		<div class="contenedor-cont">
+			<div class="img"><img src="imgs/pregunta02.png"></div>
+
+			<div class="preguntas">
+				<div class="btns" onclick="incorrecto();"><img src="imgs/v.png"></div>
+				<div class="btns" onclick="correcto('#bien02', 1);"><img src="imgs/f.png"></div>
+			</div>
+		</div>
+
+		<div class="contenedor-cont">
+			<div class="img"><img src="imgs/pregunta03.png"></div>
+
+			<div class="preguntas">
+				<div class="btns" onclick="correcto('#bien03', 2);"><img src="imgs/v.png"></div>
+				<div class="btns" onclick="incorrecto();"><img src="imgs/f.png"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+	TweenMax.set($("div"), { autoAlpha: 0});
+	TweenMax.staggerTo($("div"), 0.6, { autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.2);
+});
+
+
+	function cerrarPop(){
+
+			TweenMax.to($(".hover"), 0.6, { autoAlpha: 0, 
+				
+				ease: Power2.easeOut, 
+				onComplete: function(){
+					$("#bien01").hide();
+					$("#bien02").hide();
+					$("#bien03").hide();
+					$("#mal").hide();
+
+				}}, 0.5);
+
+
+	};
+	
+	var res = [false, false, false];
+
+	function correcto(item, respuestas){
+			res[respuestas] = true;
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($(item), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(item), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+
+			if (res[0] === true && res[1] === true && res[2]){
+				parent.postMessage("message", "*");
+			}
+
+	};
+	
+
+	function incorrecto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#mal"), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#mal"), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+	};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lip01</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+
+</head>
+
+<body style="background-color:transparent; margin:0px; overflow: hidden; ">
+
+
+<div class="hover">
+	<div class="pop" id="bien">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		
+		<h1>Protocolos básicos en el servicio telefónico:</h1>
+		<ul>
+		<li>Responde las llamadas antes del tercer timbre.</li>
+		<li>Captura las llamadas del área (*75), Direcciona las llamadas *71 y extensión, quita direccionamiento # 71.</li>
+		<li>Aplica el saludo institucional: ejemplo: servicio al cliente, buenos días/tardes, habla (di tu nombre).</li>
+		<li>Dirígete al cliente por su nombre antecedido de “Señor, Señora y pregúntale” “¿en qué le puedo ayudar?</li>
+		</ul>
+	</div>
+	<div class="pop" id="mal"  onclick="cerrarPop();">
+		<div class="cerrar"><strong>X</strong></div>
+			<h1>Protocolos básicos en el mensaje de correo electrónico:</h1>
+			<ul>
+			<li>Responde todos los correos electrónicos y con oportunidad.</li>
+			<li>No utilices mayúsculas fijas en el asunto ni contenido del mensaje.</li>
+			<li>Si te encuentras ausente o en vacaciones, deja una respuesta de correo automática. </li>
+			</ul>
+	</div>
+
+</div>
+	<div class="contain">
+
+		<div class="contenedor-cont">
+
+			<div class="preguntas">
+				<div onclick="correcto();">Canal telefónico</div>
+				<div onclick="incorrecto();">Correo electrónico</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<iframe src="iframe/lip01.html" frameborder="0" width="1280px" height="720px"></iframe>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+<script type="text/javascript">
+
+	TweenMax.staggerFrom($("div"), 0.6, { autoAlpha: 0, y:"-30", ease: Power2.easeOut}, 0.2);
+	
+
+	function cerrarPop(){
+
+			TweenMax.to($(".hover"), 0.6, { autoAlpha: 0, 
+				
+				ease: Power2.easeOut, 
+				onComplete: function(){
+					$("#bien").hide();
+					$("#mal").hide();
+
+				}}, 0.5);
+
+
+	};
+	
+
+	function correcto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#bien"), 0.6, { display:"block", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#bien"), 0.6, { display:"block",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+	};
+	
+
+	function incorrecto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#mal"), 0.6, { display:"block", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#mal"), 0.6, { display:"block",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+	};
+
+</script>
+
+</body>
+</html>

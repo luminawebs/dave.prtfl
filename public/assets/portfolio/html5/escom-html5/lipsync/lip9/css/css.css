@@ -1,0 +1,102 @@
+body, html{
+	margin: 0px;
+	padding: 0px;
+}
+
+.celu{
+	background-image: url(../images/celu.png);
+	background-repeat: no-repeat;
+	width: 390px;
+	max-width: 390px;
+	height: 1000px;
+	padding-top: 247px;
+	padding-left: 35px;
+}
+
+.elementos{
+	width: 331px;
+	height: 285px;
+	overflow: hidden;
+	display: flex;
+}
+
+.btiz{
+	position: absolute;
+	flex: 1;
+	height: 285px;
+	width: 175px;
+	cursor: pointer;
+	z-index: 10;
+	background-image: url(../images/ar-left.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+}
+
+.btder{
+	position: absolute;
+	flex: 1;
+	height: 285px;
+	width: 175px;
+	left: 175px;
+	cursor: pointer;
+	z-index: 10;
+	background-image: url(../images/ar-right.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+
+.mensajes{
+	position: absolute;
+}
+
+
+	.contenidos{
+		position: absolute;
+		z-index: 5;
+		left: 810px;
+		top: 134px;
+	}
+
+	#iframee{ position: absolute; 
+		border:none;
+		width: 1280px;
+		height: 800px;
+		z-index: 0;
+		 }	
+
+	.contBtn{
+		position: absolute;
+		display: flex;
+		left: 85px;
+		width: 1165px;
+		top: 207px;
+	}
+
+	.btn{
+		cursor: pointer;
+
+	}
+
+	.btn:hover{
+		opacity: 0.4;
+	}
+
+	#bocadillo{
+		position: absolute;
+		top: 123px;
+		left: 100px;
+		z-index: 10;
+	}
+
+	#triggerBocadillo{
+		flex: 1;
+		cursor: pointer;
+		width: 500px;
+		height: 500px;
+	}
+	#abrirPop{
+		flex: 1;
+		cursor: pointer;
+		width: 500px;
+		height: 500px;
+	}

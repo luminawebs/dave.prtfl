@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego emprendimiento // Universidad Ean</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+
+ <audio  loop id="cancion">
+  <source src="sonidos/bensound-ukulele.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio> 
+ <audio id="pop">
+  <source src="sonidos/pop.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio> 
+
+
+<body>
+
+
+<div class="popIntro">
+	<div class="btnCerrar2" onclick="cerrarPopIntro();">X</div>
+	<div style="width: 700px; margin: 40px auto 0px auto;">
+		<h1>Instrucciones</h1>
+	</div>
+	<div class="contIntro">
+		<div class="item01 itemsintro">
+			<div class="textIntro">
+			<h2>1/3</h2><br>	
+			Debes cruzar el tablero de izquierda a derecha y para lograrlo, harás clic sobre las casillas activas.</div>
+			<div class="imgIntro"><img src="imgs/bg.png" width="100%"></div>
+		</div>
+		<div class="item02 itemsintro">
+			<div class="textIntro">
+			<h2>2/3</h2> <br>
+			Dentro de las casillas decides si realizar la acción que allí se propone o no, esto te sumará o quitará puntos y determinará tu trayecto por el tablero.</div>
+			<div class="imgIntro"><img src="imgs/intro/02.png" width="100%"></div>
+		</div>
+		<div class="item03 itemsintro">
+			<div class="textIntro">
+			<h2>3/3</h2> <br>
+			Existen casillas en dónde activas un dado y este definirá tu rumbo.</div>
+			<div class="imgIntro"><img src="imgs/personaje-tablero/13.svg" width="80%"></div>
+		</div>
+	</div>
+	<div style="display: flex; width: 700px; margin: 0px auto;  align-items: center; justify-content: center;">
+		<div class="botArr" id="atras"><</div>
+		<div class="botArr" id="adelante">></div>
+	</div>
+</div>
+
+
+
+
+<div id="iniciar">
+	<div id="contenedor-init">
+		<div class="bg-personaje">
+		</div>
+		
+			<div id="personaje-init">
+				<div id="txt-init">
+					<div id="btn-init"></div>
+				</div>
+			</div>
+	</div>
+</div>
+
+<div id="todo">
+	<header>
+		<div class="nombre-empresa"><img src="imgs/titulo.png"></div>
+		<div class="btn-cerrar" onclick="windowClose();">X</div>
+		<div class="musica"><img src="imgs/icono-musica.png" width="22px"></div>
+		<div class="puntaje-top">Puntaje: <strong>0</strong></div>
+	</header>
+	<section style=""></section>
+	<footer style="display: flex;"><div class="btnInf" id="creditos">Créditos</div><div class="btnInf" id="instrucciones">Instrucciones</div></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/cols.js"></script>
+<script src="js/js.js"></script>
+<script src="js/clicks.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
+</script>
+
+
+</body>
+</html>

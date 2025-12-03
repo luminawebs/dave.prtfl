@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lip01</title>
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+
+</head>
+
+<body style="background-color:transparent; margin:0px; overflow: hidden;">
+
+<div class="hover">
+	<div class="pop" id="bien">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		<div><h1>¡Muy bien!</h1>En el Acuerdo de Nivel de Servicio se define el alcance de los servicios, roles y responsabilidades entre cliente y proveedor, se identifican los objetivos de desempeño y se establecen metas para la evaluación y entrega de los servicios, a través de la fijación de indicadores.</div>
+	</div>
+	<div class="pop" id="mal"  onclick="cerrarPop();">
+		<div class="cerrar"><strong>X</strong></div>
+		<div><h1>Incorrecto</h1> Recuerda que el Acuerdo de Nivel de Servicio establece una relación “uno a uno” con estrategias diferenciadas para la prestación del servicio entre los clientes. </div>
+	</div>
+</div>
+
+	<div class="contain">
+
+		<div class="tit"><img src="imgs/tit.png"></div>
+		<div class="contenedor-cont">
+		
+			<div class="preguntas">
+				<div id="b01" onclick="seleccion('#b01', 0);"><img src="imgs/p01.png"></div>
+				<div id="b02" onclick="seleccion('#b02', 1);"><img src="imgs/p02.png"></div>
+				<div id="b03" onclick="seleccion('#b03', 2);"><img src="imgs/p03.png"></div>
+				<div id="b04" onclick="seleccion('#b04', 3);"><img src="imgs/p04.png"></div>
+			</div>
+			<div style="width: 19px;"></div>
+			<div class="preguntas">
+				<div id="b05" onclick="seleccion('#b05', 4);"><img src="imgs/p05.png"></div>
+				<div id="b06" onclick="seleccion('#b06', 5);"><img src="imgs/p06.png"></div>
+				<div id="b07" onclick="seleccion('#b07', 6);"><img src="imgs/p07.png"></div>
+				<div id="b08" onclick="seleccion('#b08', 7);"><img src="imgs/p08.png"></div>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+var preguntasSeleccionadas = 0;
+
+$( document ).ready(function() {
+	TweenMax.set($("div"), { autoAlpha: 0});
+	TweenMax.staggerTo($("div"), 0.6, { autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.2);
+});
+
+
+var validacionElementos = [false, false, false, false, false, false, false, false];
+
+
+	
+	function seleccion(btn, validacion){
+
+		validacionElementos[validacion] = true;
+
+		console.log(validacionElementos);
+
+		if ($(btn).hasClass( "seleccionado" )){
+			$(btn).removeClass("seleccionado"); 
+			preguntasSeleccionadas--;
+
+		}
+
+		else{
+			$(btn).addClass("seleccionado"); 
+			preguntasSeleccionadas++;
+
+		}
+
+
+		if (preguntasSeleccionadas === 5){
+
+
+			if (validacionElementos[0] === true && validacionElementos[1] === true && validacionElementos[3] === true && validacionElementos[4] === true && validacionElementos[6] === true){
+				correcto();
+
+				validacionElementos = [false, false, false, false, false, false, false, false];
+
+			}
+			else{
+				incorrecto();
+
+				validacionElementos = [false, false, false, false, false, false, false, false];
+			}
+
+
+			preguntasSeleccionadas = 0;
+			$("div").removeClass("seleccionado");
+		}
+
+
+
+	}
+
+
+
+
+/* ///////////////////////////////// POPUP */
+
+
+	function cerrarPop(){
+
+			TweenMax.to($(".hover"), 0.6, { autoAlpha: 0, 
+				
+				ease: Power2.easeOut, 
+				onComplete: function(){
+					$("#bien").hide();
+					$("#mal").hide();
+
+				}}, 0.5);
+
+	};
+	
+
+	function correcto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#bien"), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#bien"), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+			parent.postMessage("message", "*");
+
+
+	};
+	
+
+	function incorrecto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#mal"), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#mal"), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+	};
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

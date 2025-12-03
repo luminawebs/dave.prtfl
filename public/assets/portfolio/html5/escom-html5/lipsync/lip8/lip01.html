@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego drag & drop</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+
+
+
+<div class="hover">
+  <div class="pop" id="bien">
+    <div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+    <div class="textoPop"><h1>¡Muy bien!</h1> Has respondido correctamente</div>
+  </div>
+</div>
+
+
+  <div id="bocadillo" onclick="toggleDirection();"><img src="imgs/bocadillo.png"></div>
+
+  <div id="triggerBocadillo" onclick="toggleDirection();"></div>
+
+<div id="bbt01" class="btnss" onclick="correcto('#bbt01','1/6','.ORG,  Por lo general ninguna página de un banco tiene como dominio “.org”', '0');"></div>
+<div id="bbt02" class="btnss" onclick="correcto('#bbt02','2/6','Los mensajes de IMPORTANTE con realce, que te inviten a dar clic sobre enlaces con tanta urgencia, no son sinónimo de corporaciones serias y con buenas intenciones.', '1');"></div>
+<div id="bbt03" class="btnss" onclick="correcto('#bbt03','3/6','No habrá un vinculo que te lleve a otra página, para confirmar datos.', '2');"></div>
+<div id="bbt04" class="btnss" onclick="correcto('#bbt04','4/6','El ciberdelincuente buscará formas para brindar confianza a través de mensajes como los que generalmente utilizan los portales web reales.', '3');"></div>
+<div id="bbt05" class="btnss" onclick="correcto('#bbt05','5/6','A pesar de que los Bancos tienen espacios en blanco solicitando su Password, siempre es importante fijarse en otros detalles y tener en cuenta que la mayoría utilizan como segunda herramienta de protección, los token de autenticación.', '4');"></div>
+<div id="bbt06" class="btnss" onclick="correcto('#bbt06','6/6','¿Un mensaje  en la parte inferior de página web gratuita?. Motivo suficiente para desconfiar y mas que provenga de un banco.', '5');"></div>
+
+
+<iframe src="personaje/lip01.html" width="1280px" height="800px" style="position: absolute; z-index: 0; border:none;"></iframe>
+
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script src="js/js.js"></script>
+ 
+</body>
+</html>

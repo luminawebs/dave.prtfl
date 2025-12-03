@@ -1,0 +1,45 @@
+body, html{
+	margin: 0px;
+	padding: 0px;
+}
+
+	.contenidos{
+		position: absolute;
+		z-index: 5;
+	}
+
+	#iframee{ position: absolute; 
+		border:none;
+		width: 1280px;
+		height: 800px;
+		z-index: 0;
+		 }	
+
+	.contBtn{
+		position: absolute;
+		display: flex;
+		left: 85px;
+		width: 1165px;
+		top: 207px;
+	}
+
+	.btn{
+		cursor: pointer;
+
+	}
+
+	.btn:hover{
+		opacity: 0.4;
+	}
+
+	#bocadillo{
+		position: absolute;
+		top: 123px;
+		left: 837px;
+		z-index: 10;
+	}
+
+	#triggerBocadillo{
+		flex: 1;
+		cursor: pointer;
+	}

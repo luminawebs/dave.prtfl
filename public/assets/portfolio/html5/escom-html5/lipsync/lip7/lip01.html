@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego drag & drop</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+
+
+
+<div class="hover">
+  <div class="pop" id="bien">
+    <div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+    <div class="textoPop"><h1></h1> </div>
+  </div>
+</div>
+
+
+
+<div id="contenedorInfo" onclick="correcto();">
+  <div class="numeroPos">1/5</div>
+  <div class="tituloPos">¿Qué es el Phishing?</div>
+</div>
+
+
+<div id="lineaTiempo">
+
+<div id="arrowleft" onclick="arleft();"><img src="imgs/ar-left.png"></div>	
+<div id="arrowright" onclick="arright();"><img src="imgs/ar-right.png"></div>	
+<div id="tiempoElementos">
+<div id="tx01" class="numtits" onclick="irA(1);"><img src="imgs/tx01.png"></div>
+<div id="tx02" class="numtits" onclick="irA(2);"><img src="imgs/tx02.png"></div>
+<div id="tx03" class="numtits" onclick="irA(3);"><img src="imgs/tx03.png"></div>
+<div id="tx04" class="numtits" onclick="irA(4);"><img src="imgs/tx04.png"></div>
+<div id="tx05" class="numtits" onclick="irA(5);"><img src="imgs/tx05.png"></div>
+<div id="linea"><img src="imgs/linea.png"></div>
+</div>
+</div>
+
+
+
+
+
+    <div id="bocadillo" onclick="toggleDirection();"><img src="imgs/bocadillo.png"></div>
+    <div id="triggerBocadillo" onclick="toggleDirection();"></div>
+
+<div id="bbt01" class="btnss" ></div>
+
+
+<iframe src="personaje/lip01.html" width="1280px" height="800px" style="position: absolute; z-index: 0; border:none;"></iframe>
+
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script src="js/js.js"></script>
+ 
+</body>
+</html>

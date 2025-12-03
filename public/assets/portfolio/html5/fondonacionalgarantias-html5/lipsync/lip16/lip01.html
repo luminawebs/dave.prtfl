@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lip01</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+
+</head>
+
+<body style="background-color:transparent, margin:0px; overflow: hidden;">
+
+
+<div class="hover">
+	<div class="pop" id="bien">
+		<div class="cerrar" onclick="cerrarPop();"><strong>X</strong></div>
+		<div><h1>¡Muy bien!</h1> Es importante comprender y darle importancia auténtica a las necesidades de nuestro cliente, brindando soluciones para lograr su lealtad. </div>
+	</div>
+	<div class="pop" id="mal"  onclick="cerrarPop();">
+		<div class="cerrar"><strong>X</strong></div>
+		<div><h1>Incorrecto</h1>  Recuerda que debes escuchar al cliente hasta entender sus necesidades, asumir su problema como propio y llevarlo de la mano con empatía hasta que se sienta satisfecho con el servicio. </div>
+	</div>
+</div>
+
+	<div class="contain">
+
+		<div class="tit"><img src="imgs/tit.png"></div>
+		<div class="contenedor-cont">
+			<div class="img"><img src="imgs/img.png"></div>
+
+			<div class="preguntas">
+				<div onclick="incorrecto();"><img src="imgs/p01.png"></div>
+				<div onclick="incorrecto();"><img src="imgs/p02.png"></div>
+				<div onclick="incorrecto();"><img src="imgs/p03.png"></div>
+				<div onclick="correcto();"><img src="imgs/p04.png"></div>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+	TweenMax.set($("div"), { autoAlpha: 0});
+	TweenMax.staggerTo($("div"), 0.6, { autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.2);
+});
+
+
+
+	function cerrarPop(){
+
+			TweenMax.to($(".hover"), 0.6, { autoAlpha: 0, 
+				
+				ease: Power2.easeOut, 
+				onComplete: function(){
+					$("#bien").hide();
+					$("#mal").hide();
+
+				}}, 0.5);
+
+
+	};
+	
+
+	function correcto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#bien"), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#bien"), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+			parent.postMessage("message", "*");
+
+	};
+	
+
+	function incorrecto(){
+
+			TweenMax.from($(".hover"), 0.6, { display:"block", autoAlpha: 0, ease: Power2.easeOut}, 0.5);
+			TweenMax.to($(".hover"), 0.6, { display:"block", autoAlpha: 1, y:"0", ease: Power2.easeOut}, 0.5);
+			TweenMax.from($("#mal"), 0.6, { display:"flex", autoAlpha: 0, y:"-40", ease: Power2.easeOut}, 0.5);
+			TweenMax.to($("#mal"), 0.6, { display:"flex",  autoAlpha: 1, ease: Power2.easeOut}, 0.5);
+
+	};
+
+</script>
+
+</body>
+</html>

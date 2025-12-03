@@ -1,0 +1,24 @@
+
+var textosInferiores = [
+
+/*41*/""];
+
+
+var subtitulos = [
+/*00*/"00", 
+/*01*///"Introducción", 
+/*02*/"Introducción", 
+/*03*/"INGENIERÍA SOCIAL", 
+/*04*/"INGENIERÍA SOCIAL", 
+/*05*/"INGENIERÍA SOCIAL", 
+/*06*/"INGENIERÍA SOCIAL",
+/*08*/"INGENIERÍA SOCIAL - ACTIVIDAD",
+/*09*/"PHISHING",
+/*10*/"PHISHING - ACTIVIDAD",
+/*11*/"USO DE REDES SOCIALES",
+/*12*/"USO DE REDES SOCIALES",
+/*13*/"USO DE REDES SOCIALES",
+/*14*/"USO DE REDES SOCIALES",
+/*14*/"USO DE REDES SOCIALES - ACTIVIDAD",
+/*14*/"USO DE REDES SOCIALES - ACTIVIDAD"
+];

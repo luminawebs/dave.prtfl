@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OVA01</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+
+  <style type="text/css">
+  	.contenedor{
+  		background-image: url(imgs/diap-01/bg.jpg);
+  		width: 1140px;
+  		height: 600px;
+  		margin: 0px auto;
+  		border-radius: 10px;
+  		overflow: hidden;
+  	}
+
+  	.personaje{
+  		position: relative;
+  		top: 100px;
+  		left: 120px;
+  	}
+
+  	.logo{
+  		position: absolute;
+  		top: 50px;
+  		left: 420px;
+  	}
+
+  	.btn-iniciar{
+  		position: absolute;
+  		top: 410px;
+  		left: 685px;
+      cursor: pointer;
+  	}
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+
+<div style="" class="contenedor">
+
+	<div class="personaje">
+		<img src="imgs/personaje.png">
+	</div>
+	<div class="logo">
+		<img src="imgs/diap-01/logo.png">
+	</div>
+	<div class="btn-iniciar">
+		<a href="index02.html"><img src="imgs/diap-01/iniciar.png"></a>
+	</div>
+	
+</div>
+
+  <script src="js/tweenmax_2.0.1_min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+  // Animacion inicial
+  TweenMax.staggerFrom("div", 0.5, {y:"50%", opacity:0, scale:0.5}, 0.2);
+  TweenMax.from(".logo", 0.5, {rotationY:-90, delay:0.8});
+
+  // movimiento boton
+  $(".btn-iniciar").mouseover(function() {
+      TweenMax.to(".btn-iniciar", 0.1, {scale: 0.9, opacity:0.8, filter: 'brightness(200%)'});
+  });
+
+  $(".btn-iniciar").mouseout(function() {
+      TweenMax.to(".btn-iniciar", 0.5, {scale: 1, opacity:1, filter: 'brightness(100%)'});
+  });
+
+</script> 
+</body>
+</html>

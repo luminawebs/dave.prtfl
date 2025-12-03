@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OVA01</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+
+  <style type="text/css">
+  	.contenedor{
+  		background-image: url(imgs/diap-03/bg.jpg);
+  		width: 1140px;
+  		height: 600px;
+  		margin: 0px auto;
+  		border-radius: 10px;
+  		overflow: hidden;
+  	}
+
+  	.personaje{
+  		position: relative;
+  		top: 100px;
+  		left: 120px;
+      z-index: 1;
+      width: 0px;
+  	}
+
+  	.fnd-txt{
+  		position: absolute;
+  		top: 50px;
+  		left: 69px;
+      /*background-image: url(imgs/diap-03/im01.png);*/
+      width: 1015px;
+      height: 464px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+
+  	}
+
+    .fnd-txt img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+  	.btn-siguiente{
+  		position: absolute;
+  		top: 520px;
+  		left: 890px;
+      cursor: pointer;
+  	}
+
+    #t02, #t03, #t04, #t05, #t06{
+      display: none;
+      position: absolute;
+    }
+
+    #t03{
+      width: 1015px;
+      height: 464px;
+      background-image: url(imgs/diap-03/im03.png);
+    }
+
+
+
+    #bgpopups{
+      position: absolute;
+      cursor: pointer;
+      width: 724px;
+      height: 312px;
+      background-image: url(imgs/diap-03/fnd-pop.jpg);
+      z-index: 3;
+      left: 301px;
+      top: 142px;
+      display: none;
+    }
+
+
+    #bgpopups img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+
+
+    #btn01{
+      top: 170px;
+      left: 420px;
+    }
+
+    #btn02{
+      top: 170px;
+      left: 780px;
+    }
+
+    #btn03{
+      top: 335px;
+      left: 420px;
+    }
+
+    #btn04{
+      top: 335px;
+      left: 780px;
+    }
+
+    .btns{
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+
+
+    .btns:hover{
+      transition: all 0.3s;
+      filter: brightness(200%);
+    }
+
+
+    #txt01, #txt02, #txt03, #txt04{
+      display: none;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+
+<div style="" class="contenedor">
+
+  <div id="bgpopups">
+    <img src="imgs/diap-03/pop01.png" id="txt01">
+    <img src="imgs/diap-03/pop02.png" id="txt02">
+    <img src="imgs/diap-03/pop03.png" id="txt03">
+    <img src="imgs/diap-03/pop04.png" id="txt04">
+  </div>
+
+	<div class="personaje">
+		<img src="imgs/personaje.png">
+	</div>
+	<div class="fnd-txt">
+    <img src="imgs/diap-03/im01.png" id="t01">
+    <img src="imgs/diap-03/im02.png" id="t02">
+    <div id="t03">
+      <img src="imgs/diap-03/btn01.png" id="btn01" class="btns">
+      <img src="imgs/diap-03/btn02.png" id="btn02" class="btns">
+      <img src="imgs/diap-03/btn03.png" id="btn03" class="btns">
+      <img src="imgs/diap-03/btn04.png" id="btn04" class="btns">
+    </div>
+	</div>
+	<div class="btn-siguiente">
+		<img src="imgs/btn-siguiente.jpg">
+	</div>
+	
+</div>
+
+  <script src="js/tweenmax_2.0.1_min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+  // Animacion inicial
+  TweenMax.staggerFrom("div", 0.5, {y:"50%", opacity:0, scale:0.5}, 0.2);
+  TweenMax.from(".logo", 0.5, {rotationY:-90, delay:0.8});
+
+
+
+  var estado = 1;
+
+  
+  $(".btn-siguiente").click(function() {
+    if(estado == 1){
+      TweenMax.to("#t01", 0.5, {scale: 1, opacity:0, x:800});
+      TweenMax.from("#t02", 1, { scale: 1, opacity:0, display:'block', delay:0.1, x:-1200});
+      TweenMax.to("#t02", 1, { scale: 1, opacity:1, display:'block', delay:0.4});
+      estado++;
+    }
+    else if(estado == 2){
+      TweenMax.to("#t02", 0.5, {scale: 1, opacity:0, x:800});
+      TweenMax.from("#t03", 1, { scale: 1, opacity:0, display:'block', delay:0.1, x:-1200});
+      TweenMax.to("#t03", 1, {scale: 1, opacity:1, display:'block', delay:0.4});
+      estado++;
+    }
+    else if(estado == 3){
+      window.open("index04.html", "_blank"); 
+    }
+  });
+
+
+
+  
+  $("#bgpopups").click(function() {
+      TweenMax.to("#bgpopups", 0.4, { scale: 1, opacity:0, display:'none', x:2200});
+      TweenMax.to("#bgpopups img", 0.4, { scale: 0.9, opacity:0, display:'none'});
+  });
+
+  
+  $("#btn01").click(function() {
+      bgpopupss();
+      TweenMax.to("#txt01", 0.4, { scale: 1, opacity:1, display:'block', rotationY:0, perspective:0});
+  });
+
+  $("#btn02").click(function() {
+      bgpopupss();
+      TweenMax.to("#txt02", 0.4, { scale: 1, opacity:1, display:'block'});
+  });
+
+  $("#btn03").click(function() {
+      bgpopupss();
+      TweenMax.to("#txt03", 0.4, { scale: 1, opacity:1, display:'block'});
+  });
+
+  $("#btn04").click(function() {
+      bgpopupss();
+      TweenMax.to("#txt04", 0.4, { scale: 1, opacity:1, display:'block'});
+  });
+
+
+  function bgpopupss(){
+      TweenMax.from("#bgpopups", 1, { scale: 0.9, opacity:0, display:'block', delay:0.1, x:-1200});
+      TweenMax.to("#bgpopups", 0.4, { scale: 1, opacity:1, display:'block', delay:0.4, x:0});
+  }
+
+
+</script> 
+</body>
+</html>
