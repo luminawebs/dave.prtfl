@@ -96,7 +96,7 @@ const Menu = () => {
         >
           {t('nav.home')}
         </Link></li>
-
+        {/*
         <li className="dropdown">
           <Link
             to={getLocalizedPath('/personajes3d')}
@@ -125,7 +125,7 @@ const Menu = () => {
             {t('nav.courses') ?? 'Courses'}
           </Link>
         </li>
-        {/* <li>
+         <li>
           <Link
             to={getLocalizedPath('/lmspricing')}
             onClick={() => handleNavItemClick('LMS SaaS', 'main_navigation')}
@@ -147,6 +147,14 @@ const Menu = () => {
             onClick={() => handleNavItemClick('Portfolio', 'main_navigation')}
           >
             {t('nav.portfolio')}
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={getLocalizedPath('/blog')}
+            onClick={() => handleNavItemClick('Blog', 'main_navigation')}
+          >
+            {t('nav.blog') ?? 'Blog'}
           </Link>
         </li>
       </ul>

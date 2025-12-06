@@ -11,7 +11,90 @@ export const en = {
     lmsSaas: 'LMS SaaS',
     resources: 'Resources',
     portfolio: 'Portfolio',
-    experience: 'Experience'
+    experience: 'Experience',
+    blog: 'Blog'
+  },
+  home: {
+    hero: {
+      title: "Hi, I’m David Castañeda — UI/UX Developer & Front-End Engineer",
+      lead: "I design and build clean, accessible, high-performance digital experiences.",
+      description: "Blending UX strategy, visual design, and modern front-end development, I create products that are intuitive, fast, and user-centered.",
+      cta: { hire: "Hire Me", portfolio: "View Portfolio" }
+    },
+    trusted: {
+      title: "Trusted Experience Across Industries",
+      subtitle: "Education · Banking · Energy · Corporate Training · EdTech"
+    },
+    what: {
+      title: "What I Do",
+      lead: "I combine UX research, interface design, and modern code to create products that deliver real impact.",
+      uiux: {
+        title: "UI/UX Design",
+        items: [
+          "User research & personas",
+          "Prototyping & interaction design",
+          "Information architecture",
+          "Usability testing"
+        ]
+      },
+      frontend: {
+        title: "Front-End Development",
+        items: [
+          "HTML5, CSS3, Flexbox, Grid, LESS",
+          "JavaScript, React, Angular",
+          "Responsive design & accessibility",
+          "Component-based development"
+        ]
+      },
+      lxd: {
+        title: "Learning Experience Design (LXD)",
+        items: [
+          "Pedagogical content design",
+          "Storyline & Rise development",
+          "LMS integration (SCORM/xAPI)",
+          "Engagement-focused learning flows"
+        ]
+      },
+      cta: "See My Work"
+    },
+    case: {
+      title: "Featured Case Studies",
+      lead: "Highlighting measurable results across UI/UX and front-end projects.",
+      cards: [
+        { title: "UI/UX Redesign for a Corporate Learning Platform", text: "Improved task completion by +42% with a new navigation model and modular UI components." },
+        { title: "Front-End Development for Digital Training Ecosystem", text: "Built a performant React-based interface with reusable components; reduced load time by 35%." },
+        { title: "Interactive Learning with 3D Avatars", text: "Created an engagement-focused eLearning experience using custom 3D avatars and SCORM automation." }
+      ],
+      cta: "View All Case Studies"
+    },
+    process: {
+      title: "My Process",
+      lead: "How I create effective digital experiences.",
+      steps: [
+        { title: "1. Discover", text: "User research, problem definition, and experience mapping." },
+        { title: "2. Design", text: "Wireframes, prototypes, UI design systems." },
+        { title: "3. Develop", text: "Clean, efficient, accessible front-end code." },
+        { title: "4. Deliver", text: "Testing, optimization, and LMS/product integration." }
+      ]
+    },
+    stack: {
+      title: "Tech Stack",
+      design: { title: "Design" },
+      frontend: { title: "Front-End" },
+      elearning: { title: "eLearning" },
+      methods: { title: "Methods" }
+    },
+    about: {
+      title: "About Me",
+      p1: "I’m a UI/UX Developer and Learning Experience Designer with a Master’s in Innovation and certifications in UX Research and SCRUM Master I.",
+      p2: "I combine design thinking with modern development to deliver experiences that are scalable, intuitive, and visually consistent across all platforms.",
+      cta: { cv: "Download CV", contact: "Contact Me" }
+    },
+    work: {
+      title: "Let’s Work Together",
+      lead: "Whether you need a UI/UX expert, a front-end engineer, or an eLearning specialist, I can help you build an experience that works.",
+      cta: { call: "Book a Call", message: "Send a Message" }
+    }
   },
 
   // Header
@@ -335,6 +418,12 @@ export const en = {
     }
   },
 
+  portfolioCourses: {
+    title: 'E-learning courses Examples',
+    subtitle: 'Check out some of our',
+    subtitleHighlight: 'educational courses',
+    viewAllCourses: 'View all courses'
+  },
   // Steps Section
   steps: {
     title: 'Process',
@@ -381,7 +470,7 @@ export const en = {
     subtitle: "Let's",
     subtitleHighlight: 'Connect',
     addressTitle: 'Our address',
-    address: 'Cll 18 # 9 39',
+    address: 'Bogotá, Colombia',
     emailTitle: 'Email',
     contactPerson: 'David Castañeda',
     scheduleTitle: 'Schedule',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const LMSPricing = () => {
   // Constants
@@ -380,23 +380,23 @@ const LMSPricing = () => {
                 <div className="nav nav-tabs nav nav-tabs" role="tablist">
                   {['basic', 'integrations', 'payment'].map(tab => (
                     <div key={tab} className="nav-item">
-                      <a
+                      <button
+                        type="button"
                         role="tab"
                         data-rr-ui-event-key={tab}
                         id={`${tab}Tab`}
                         aria-controls={`${tab}Panel`}
                         aria-selected={activeTab === tab}
-                        className={`nav-link nav-link ${activeTab === tab ? 'active' : ''}`}
+                        className={`nav-link ${activeTab === tab ? 'active' : ''}`}
                         tabIndex={activeTab === tab ? 0 : -1}
                         onClick={() => setActiveTab(tab)}
-                        href="#"
                       >
                         <i className={`bi bi-${tab === 'basic' ? 'gear' :
                             tab === 'integrations' ? 'plug' :
                               'credit-card'
                           }`} />
                         {translations[language][tab]}
-                      </a>
+                      </button>
                     </div>
                   ))}
                 </div>

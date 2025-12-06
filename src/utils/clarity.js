@@ -92,7 +92,7 @@ export const trackClarityPerformance = (metricName, value, unit = 'ms') => {
   trackClarityEvent(`performance_${metricName.replace(/\s+/g, '_').toLowerCase()}`);
 };
 
-export default {
+const clarityAPI = {
   initializeClarity,
   trackClarityEvent,
   setClarityUserSession,
@@ -107,3 +107,5 @@ export default {
   trackClarityError,
   trackClarityPerformance
 };
+
+export default clarityAPI;

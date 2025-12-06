@@ -7,6 +7,7 @@ const HomePage = lazy(() => import('../pages/HomePage'));
 const Personajes3DPage = lazy(() => import('../pages/Personajes3DPage'));
 const LMSPricing = lazy(() => import('../pages/LMSPricing'));
 const PortfolioPage = lazy(() => import('../pages/PortfolioPage'));
+const BlogPage = lazy(() => import('../pages/BlogPage'));
 const PortfolioDetails = lazy(() => import('../components/PortfolioDetails'));
 const ResourcesPage = lazy(() => import('../pages/ResourcesPage'));
 const CoursesPage = lazy(() => import('../pages/CoursesPage'));
@@ -19,7 +20,7 @@ const LanguageRouter = () => {
   const { switchLanguage } = useLanguage();
 
   // Validate language parameter
-  const isValidLanguage = ['es', 'en'].includes(lang);
+  const isValidLanguage = ['es', 'en', 'de'].includes(lang);
 
   useEffect(() => {
     if (isValidLanguage) {
@@ -41,6 +42,7 @@ const LanguageRouter = () => {
       <Route path="/courses" element={<CoursesPage />} />
       <Route path="/experience" element={<ExperiencePage />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/blog" element={<BlogPage />} />
       <Route path="/portfolio/:slug" element={<PortfolioDetails />} />
       <Route path="/coming-soon" element={<ComingSoonPage />} />
       <Route path="/ai-proficiency-challenge" element={<XRAIProficiencyChallenge />} />

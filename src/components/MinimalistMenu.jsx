@@ -46,6 +46,14 @@ const MinimalistMenu = () => {
             Contacto
           </a>
         </li>
+        <li>
+          <Link
+            to={getLocalizedPath('/blog')}
+            onClick={() => handleMenuClick('Blog', 'minimalist_navigation')}
+          >
+            Blog
+          </Link>
+        </li>
       </ul>
     </nav>
   );

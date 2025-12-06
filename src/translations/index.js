@@ -1,9 +1,11 @@
 import { es } from './es';
 import { en } from './en';
+import { de } from './de';
 
 export const translations = {
   es,
-  en
+  en,
+  de
 };
 
 export const getTranslation = (language, key) => {

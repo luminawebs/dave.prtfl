@@ -15,7 +15,7 @@ export const LanguageProvider = ({ children }) => {
     // Extract language from URL if available
     const path = window.location.pathname;
     const urlLang = path.split('/')[1];
-    if (['es', 'en'].includes(urlLang)) {
+    if (['es', 'en', 'de'].includes(urlLang)) {
       return urlLang;
     }
 
@@ -176,7 +176,8 @@ export const LanguageProvider = ({ children }) => {
     switchLanguage,
     getLocalizedPath,
     isSpanish: language === 'es',
-    isEnglish: language === 'en'
+    isEnglish: language === 'en',
+    isGerman: language === 'de'
   };
 
   return (

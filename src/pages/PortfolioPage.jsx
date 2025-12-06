@@ -155,10 +155,70 @@ const PortfolioPage = () => {
                 </article>
               </div>
 
-
+              <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
+                <article className="portfolio-entry" onClick={() => handleProjectClick(4)}>
+                  <figure className="entry-image">
+                    <img src="/assets/img/portfolio/3d-avatar.png" className="img-fluid" alt="" loading="lazy" />
+                    <div className="overlay-content">
+                      <div className="entry-meta">3D Animation</div>
+                      <h3 className="entry-title">3D Avatars for Education</h3>
+                      <div className="entry-links">
+                        <button
+                          onClick={() => handleProjectClick(4)}
+                          style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
+                        >
+                          <i className="bi bi-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </figure>
+                </article>
+              </div>
 
 
               <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
+                <article className="portfolio-entry" onClick={() => handleProjectClick(5)}>
+                  <figure className="entry-image">
+                    <img src="/assets/img/courses.png" className="img-fluid" alt="" loading="lazy" />
+                    <div className="overlay-content">
+                      <div className="entry-meta">eLearning Development</div>
+                      <h3 className="entry-title">Courses Development</h3>
+                      <div className="entry-links">
+                        <button
+                          onClick={() => handleProjectClick(5)}
+                          style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
+                        >
+                          <i className="bi bi-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </figure>
+                </article>
+              </div>
+
+
+              <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
+                <article className="portfolio-entry" onClick={() => handleProjectClick(6)}>
+                  <figure className="entry-image">
+                    <img src="/assets/img/portfolio/ruta-virtual/1-1b2ec113644629.6209e83c2fc38.png" className="img-fluid" alt="" loading="lazy" />
+                    <div className="overlay-content">
+                      <div className="entry-meta">eLearning platform UI/UX For Areandina University</div>
+                      <h3 className="entry-title">Platform Development</h3>
+                      <div className="entry-links">
+                        <button
+                          onClick={() => handleProjectClick(6)}
+                          style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
+                        >
+                          <i className="bi bi-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </figure>
+                </article>
+              </div>
+
+
+              {/* <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
                 <article className="portfolio-entry" onClick={() => handleProjectClick(3)}>
                   <figure className="entry-image">
                     <img src="/assets/img/portfolio/material-receipt/02-finished/end-img.png" className="img-fluid" alt="" loading="lazy" />
@@ -166,9 +226,9 @@ const PortfolioPage = () => {
                       <div className="entry-meta">UI/UX Design</div>
                       <h3 className="entry-title">A UX Overhaul for Material Receipts</h3>
                       <div className="entry-links">
-                        {/* <a href="assets/img/portfolio/material-receipt/02-finished/end-img.png" className="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
+                         <a href="assets/img/portfolio/material-receipt/02-finished/end-img.png" className="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
                           <i className="bi bi-arrows-angle-expand"></i>
-                        </a> */}
+                        </a> 
                         <button
                           onClick={() => handleProjectClick(1)}
                           style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
@@ -180,7 +240,7 @@ const PortfolioPage = () => {
                   </figure>
                 </article>
               </div>
-
+*/}
 
 
 

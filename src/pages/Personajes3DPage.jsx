@@ -8,11 +8,6 @@ const Personajes3DPage = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('tab1');
 
-  // Handle tab clicks
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-  };
-
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -69,7 +64,7 @@ const Personajes3DPage = () => {
 
                 <div className="description">
                   <p>Descubre estrategias innovadoras para la educación digital. Transformamos contenidos en experiencias
-                    interactivas que cautivan a los estudiantes. Nuestro equipo especializado combina tecnología
+                    interactivas que cautivan a los estudiantes.  equipo especializado combina tecnología
                     pedagógica y diseño impactante para crear cursos que destacan en el competitivo mundo del aprendizaje
                     en línea.</p>
                 </div>
@@ -312,6 +307,7 @@ const Personajes3DPage = () => {
                               }}
                               allow="accelerometer; gyroscope; encrypted-media; picture-in-picture"
                               allowFullScreen
+                              title={t('personajes3d.videoTitle')}
                             ></iframe>
                           </div>
 

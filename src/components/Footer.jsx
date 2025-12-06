@@ -13,7 +13,7 @@ const Footer = () => {
                   <span className="sitename"><img src="assets/img/edunest-dark.svg" alt="" /></span>
                 </a>
                 <p>Descubre estrategias innovadoras para la educación digital. Transformamos contenidos en experiencias
-                  interactivas que cautivan a los estudiantes. Nuestro equipo especializado combina tecnología
+                  interactivas que cautivan a los estudiantes. Combino tecnología
                   pedagógica y diseño impactante para crear cursos que destacan en el competitivo mundo del aprendizaje
                   en línea.</p>
                 <div className="social-links d-flex mt-4">
@@ -49,7 +49,6 @@ const Footer = () => {
 
               <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                 <h4>Contacto</h4>
-                <p>Cll 18 # 9 39</p>
                 <p>Bogotá</p>
                 <p>Colombia</p>
                 <p className="mt-4"><strong>Teléfono:</strong> <span>+57 310 3339208</span></p>

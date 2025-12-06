@@ -61,6 +61,23 @@ const LanguageSelector = ({ className = '', style = {} }) => {
       >
         eng
       </button>
+      <span style={{ color: '#6c757d', fontSize: '14px', marginLeft: '8px', marginRight: '8px' }}>|</span>
+      <button 
+        onClick={() => handleLanguageChange('de')}
+        style={{
+          background: 'none',
+          border: 'none',
+          textDecoration: 'none',
+          color: language === 'de' ? '#e3a127' : '#6c757d',
+          fontWeight: language === 'de' ? 'bold' : 'normal',
+          fontSize: '14px',
+          cursor: 'pointer',
+          padding: 0
+        }}
+        aria-label="Switch to German"
+      >
+        deu
+      </button>
     </div>
   );
 };

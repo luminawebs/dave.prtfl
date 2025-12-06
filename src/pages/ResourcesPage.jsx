@@ -1,9 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { trackButtonClick, trackLinkClick } from '../utils/analytics';
-import XRAIProficiencyChallenge from '../components/G-01-AIProficiency';
 import FreeResourcesSection from '../components/Resources';
 
 const ResourcesPage = () => {
@@ -61,7 +59,7 @@ const ResourcesPage = () => {
               <span className="badge text-uppercase mb-2">¡Mantente actualizado!</span>
               <h2>Recibe nuevos recursos gratuitos cada mes</h2>
               <p className="my-4">
-                Suscríbete a nuestro newsletter y recibe acceso anticipado a nuevos recursos, guías exclusivas y las últimas tendencias en tecnología educativa.
+                Suscríbete al newsletter y recibe acceso anticipado a nuevos recursos, guías exclusivas y las últimas tendencias en tecnología educativa.
               </p>
 
               <div className="features d-flex flex-wrap gap-3 mb-4">

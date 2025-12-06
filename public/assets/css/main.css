@@ -2483,7 +2483,7 @@ section,
   margin-bottom: 1rem;
 }
 
-.about .about-content .feature-item {
+.feature-item {
   padding: 1.25rem;
   background-color: var(--surface-color);
   border-radius: 8px;
@@ -2492,25 +2492,25 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .about-content .feature-item:hover {
+ .feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.about .about-content .feature-item i {
+ .feature-item i {
   font-size: 1.75rem;
   color: var(--accent-color);
   margin-bottom: 0.75rem;
   display: block;
 }
 
-.about .about-content .feature-item h5 {
+ .feature-item h5 {
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
 }
 
-.about .about-content .feature-item p {
+.feature-item p {
   font-size: 0.9rem;
   margin-bottom: 0;
 }
@@ -4278,7 +4278,7 @@ section,
 }
 
 .portfolio-details .portfolio-details-content {
-  padding: 0 0 0 2rem;
+  padding: 0 0 0 0rem;
   height: 100%;
   display: flex;
   flex-direction: column;

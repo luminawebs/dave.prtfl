@@ -157,13 +157,6 @@ export const trackPurchase = (transactionId, value, currency = 'USD', items = []
 
 // Track video interactions
 export const trackVideoInteraction = (videoTitle, action, progress = null) => {
-  const eventData = {
-    video_title: videoTitle,
-    video_action: action,
-    video_progress: progress,
-    page_location: window.location.href
-  };
-  
   gtag('event', 'video_' + action, {
     event_category: 'Video',
     event_label: videoTitle,
@@ -194,7 +187,7 @@ export const trackDownload = (fileName, fileType, fileUrl) => {
   trackClarityEvent(`download_${fileType.toLowerCase()}`);
 };
 
-export default {
+const unifiedAnalyticsAPI = {
   initializeAnalytics,
   trackMenuClick,
   trackButtonClick,
@@ -216,3 +209,5 @@ export default {
   trackSearch,
   trackDownload
 };
+
+export default unifiedAnalyticsAPI;

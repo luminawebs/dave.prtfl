@@ -10,6 +10,7 @@ export const portfolioData = {
     client: "Energy (Oil & Gas) Company",
     website: "",
     websiteUrl: "#",
+    iframeHtml: `<iframe width="800" height="800" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeNuYCI6PZyU3DefLtfxq48%2FPrototipo-Sleep01%3Fpage-id%3D0%253A1%26node-id%3D176%253A537%26viewport%3D671%252C433%252C0.03%26scaling%3Dscale-down%26starting-point-node-id%3D176%253A537" title="Figma prototype" allowFullScreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>`,
     description: `Track 3rd Party & Approvals
 A UX Revision for Material Receipts
 1. Project Overview
@@ -159,36 +160,7 @@ Community Building: Strong user engagement with peer support and community featu
       // "/assets/img/portfolio/together/e880e5151173877.6307339ab73ef.png"
     ],
     techStack: ["Figma", "User Research", "UI/UX Design", "Cultural Analysis", "Mobile Design"],
-    accordion: [
-      {
-        id: "overview",
-        title: "Project Overview",
-        icon: "bi-clipboard-data",
-        content: "A culturally-sensitive mobile application designed specifically for Colombian women to improve their sleep quality, taking into account local cultural factors, family dynamics, and socioeconomic considerations.",
-        expanded: true
-      },
-      {
-        id: "research", 
-        title: "Research Process",
-        icon: "bi-search",
-        content: "Conducted extensive user research with 50+ Colombian women across different demographics, analyzing cultural factors, environmental challenges, and behavioral patterns that affect sleep quality in the Colombian context.",
-        expanded: false
-      },
-      {
-        id: "challenge",
-        title: "The Challenge",
-        icon: "bi-exclamation-diamond",
-        content: "Colombian women face unique sleep challenges including extended family responsibilities, traditional gender roles, environmental factors, and socioeconomic pressures that existing sleep apps don't address.",
-        expanded: false
-      },
-      {
-        id: "solution",
-        title: "The Solution",
-        icon: "bi-award",
-        content: "Developed a culturally-adapted mobile application with personalized sleep plans, community support features, practical tools for managing family schedules, and stress reduction techniques tailored for Colombian women.",
-        expanded: false
-      }
-    ],
+    
     features: [
       "Cultural Context Integration",
       "Personalized Sleep Plans",
@@ -223,29 +195,6 @@ Community Building: Strong user engagement with peer support and community featu
       "assets/img/portfolio/portfolio-1.webp"
     ],
     techStack: ["React", "TypeScript", "Node.js", "MQTT", "MongoDB"],
-    accordion: [
-      {
-        id: "overview",
-        title: "Project Overview",
-        icon: "bi-clipboard-data",
-        content: "A revolutionary smart home interface that connects and controls various IoT devices through a single, elegant dashboard designed for maximum usability.",
-        expanded: true
-      },
-      {
-        id: "challenge",
-        title: "The Challenge",
-        icon: "bi-exclamation-diamond",
-        content: "Integrating multiple device protocols and ensuring real-time responsiveness while maintaining an intuitive user experience across different device categories.",
-        expanded: false
-      },
-      {
-        id: "solution",
-        title: "The Solution",
-        icon: "bi-award",
-        content: "We developed a unified API layer with real-time WebSocket connections and implemented an adaptive UI that responds to different device capabilities and states.",
-        expanded: false
-      }
-    ],
     features: [
       "Device Integration",
       "Real-time Control",
@@ -254,6 +203,125 @@ Community Building: Strong user engagement with peer support and community featu
       "Voice Commands",
       "Remote Access"
     ],
+    liveProjectUrl: "#",
+    nextProjectUrl: "#"
+  }
+  ,
+  4: {
+    title: "3D Avatars for Education",
+    badge: "3D Animation",
+    template: "avatars3d",
+    date: "December 2025",
+    client: "Lúmina Interactiva",
+    website: "",
+    websiteUrl: "#",
+    description: "Bring your educational and corporate content to life with animated 3D avatars. We transform scripts into engaging videos with professional voice-over, HD render and motion graphics. Fast delivery in 3–4 weeks and multi-format output ready for LMS, YouTube or events.",
+    mainImages: [
+      "assets/img/services/services-2.webp"
+    ],
+    thumbnailImages: [],
+    techStack: [
+      "Blender",
+      "3D Animation",
+      "Voice-over",
+      "Motion Graphics",
+      "LMS Ready"
+    ],
+    accordion: [
+      {
+        id: "overview",
+        title: "Project Overview",
+        icon: "bi-clipboard-data",
+        content: "3D avatars that captivate your audience and elevate the quality of educational and corporate content without excessive budgets. Ideal for courses, presentations and campaigns.",
+        expanded: true
+      },
+      {
+        id: "process",
+        title: "Production Process",
+        icon: "bi-diagram-3",
+        content: "Step 01: Character Selection. Step 02: Script Development. Step 03: Voice Recording. Step 04: Animation & Render. Step 05: Motion Graphics + Delivery.",
+        expanded: false
+      },
+      {
+        id: "benefits",
+        title: "Benefits",
+        icon: "bi-bar-chart-line",
+        content: "Higher retention, accessible production, agile delivery in 3–4 weeks and measurable results with improved conversions and brand recall.",
+        expanded: false
+      },
+      {
+        id: "packages",
+        title: "Packages",
+        icon: "bi-box-seam",
+        content: "Basic, Standard, Advanced and Premium packages with included minutes, revisions and multi-format delivery. Tailored to project complexity.",
+        expanded: false
+      }
+    ],
+    features: [
+      "3D Characters",
+      "Script + Voice-over",
+      "Animation & Render",
+      "Motion Graphics",
+      "Multi-format Delivery",
+      "Fast Production",
+      "Measurable Results"
+    ],
+    liveProjectUrl: "/en/personajes3d",
+    nextProjectUrl: "#"
+  }
+  ,
+  5: {
+    title: "Courses Development",
+    badge: "eLearning Development",
+    template: "courses",
+    date: "December 2025",
+    client: "Lúmina Interactiva",
+    website: "",
+    websiteUrl: "#",
+    description: "Design and development of modern, accessible learning experiences using Storyline/Rise and custom front-end where needed. Focused on pedagogy, usability, and LMS-ready delivery (SCORM/xAPI).",
+    mainImages: [
+      "/assets/img/courses.png"
+    ],
+    thumbnailImages: [],
+    techStack: [
+      "Figma",
+      "Storyline",
+      "Rise",
+      "HTML5",
+      "SCORM/xAPI"
+    ],
+    features: [
+      "Pedagogical Content Design",
+      "Prototype & Interaction Design",
+      "Responsive Front-End",
+      "Accessibility",
+      "LMS Integration"
+    ],
+    liveProjectUrl: "/en/courses",
+    nextProjectUrl: "#"
+  }
+  ,
+  6: {
+    title: "Elearning platform for Areandina University",
+    badge: "E-learning Platform",
+    template: "image-gallery",
+    date: "December 2025",
+    client: "Areandina University",
+    website: "",
+    websiteUrl: "#",
+    description: "Case study of an eLearning platform implementation for Areandina University.",
+    iframeHtml: `<iframe src="https://player.vimeo.com/video/676943391?h=1ed441bddc&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="100%" height="750" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>`,
+    mainImages: [
+      "/assets/img/portfolio/ruta-virtual/1-1b2ec113644629.6209e83c2fc38.png",
+      "/assets/img/portfolio/ruta-virtual/2-1baca6113644629.620b36c3e4da6.png",
+      "/assets/img/portfolio/ruta-virtual/3-870b6113644629.620b36c3e3c22.png",
+      "/assets/img/portfolio/ruta-virtual/4-955cfb113644629.620b36c3e5f28.jpg",
+      "/assets/img/portfolio/ruta-virtual/5-21bece113644629.620b36c3e451f.jpg",
+      "/assets/img/portfolio/ruta-virtual/6-9de18a113644629.620b36c3e5723.jpg"
+    ],
+    thumbnailImages: [],
+    techStack: ["Figma", "Moodle", "HTML5", "SCORM/xAPI"],
+    features: [],
     liveProjectUrl: "#",
     nextProjectUrl: "#"
   }

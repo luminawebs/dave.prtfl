@@ -1,0 +1,131 @@
+🔥 New Home Page — UI/UX Developer & Front-End Engineer Personal Brand
+H1 — Hero Section
+
+Hi, I’m David Castañeda — UI/UX Developer & Front-End Engineer
+I design and build clean, accessible, high-performance digital experiences.
+Blending UX strategy, visual design, and modern front-end development, I create products that are intuitive, fast, and user-centered.
+
+CTA: Hire Me →
+CTA Secondary: View Portfolio →
+
+Trusted Experience Across Industries
+
+5+ years crafting digital solutions for
+Education · Banking · Energy · Corporate Training · EdTech
+
+Logos or brief icon strip (Capgemini, EAN University, etc.)
+
+What I Do
+
+I combine UX research, interface design, and modern code to create products that deliver real impact.
+
+UI/UX Design
+
+User research & personas
+
+Prototyping & interaction design
+
+Information architecture
+
+Usability testing
+
+Front-End Development
+
+HTML5, CSS3, Flexbox, Grid, LESS
+
+JavaScript, React, Angular
+
+Responsive design & accessibility
+
+Component-based development
+
+Learning Experience Design (LXD)
+
+Pedagogical content design
+
+Storyline & Rise development
+
+LMS integration (SCORM/xAPI)
+
+Engagement-focused learning flows
+
+CTA: See My Work
+
+Featured Case Studies
+
+Highlight a few high-impact results.
+
+01. UI/UX Redesign for a Corporate Learning Platform
+
+Improved task completion by +42% with a new navigation model and modular UI components.
+
+02. Front-End Development for Digital Training Ecosystem
+
+Built a performant React-based interface with reusable components; reduced load time by 35%.
+
+03. Interactive Learning with 3D Avatars
+
+Created an engagement-focused eLearning experience using custom 3D avatars and SCORM automation.
+
+CTA: View All Case Studies
+
+My Process
+
+How I create effective digital experiences.
+
+1. Discover
+User research, problem definition, and experience mapping.
+
+2. Design
+Wireframes, prototypes, UI design systems.
+
+3. Develop
+Clean, efficient, accessible front-end code.
+
+4. Deliver
+Testing, optimization, and LMS/product integration.
+
+Tech Stack
+
+Design: Figma, Adobe XD, Prototyping, UX Research
+Front-End: HTML5, CSS3, JavaScript, React, Angular
+eLearning: Storyline, Rise, SCORM, xAPI
+Methods: SCRUM, Design Thinking
+
+About Me
+
+I’m a UI/UX Developer and Learning Experience Designer with a Master’s in Innovation and certifications in UX Research and SCRUM Master I.
+
+I combine design thinking with modern development to deliver experiences that are scalable, intuitive, and visually consistent across all platforms.
+
+CTA: Download CV
+CTA Secondary: Contact Me
+
+Services
+
+(Reframed as personal expertise, not agency services)
+
+UI/UX Design & Research
+
+UX strategy, prototypes, design systems, testing.
+
+Front-End Development
+
+Component libraries, responsive interfaces, performance improvements.
+
+eLearning Development
+
+Storyline, Rise, interactive modules, microlearning, SCORM/xAPI.
+
+LMS Integration
+
+Moodle, Canvas, Blackboard, custom SCORM pipelines.
+
+CTA: Explore Services
+
+Let’s Work Together
+
+Whether you need a UI/UX expert, a front-end engineer, or an eLearning specialist, I can help you build an experience that works.
+
+Primary CTA: Book a Call
+Secondary CTA: Send a Message
