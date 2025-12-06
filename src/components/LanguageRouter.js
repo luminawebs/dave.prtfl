@@ -8,6 +8,7 @@ const Personajes3DPage = lazy(() => import('../pages/Personajes3DPage'));
 const LMSPricing = lazy(() => import('../pages/LMSPricing'));
 const PortfolioPage = lazy(() => import('../pages/PortfolioPage'));
 const BlogPage = lazy(() => import('../pages/BlogPage'));
+const BlogPostPage = lazy(() => import('../pages/BlogPostPage'));
 const PortfolioDetails = lazy(() => import('../components/PortfolioDetails'));
 const ResourcesPage = lazy(() => import('../pages/ResourcesPage'));
 const CoursesPage = lazy(() => import('../pages/CoursesPage'));
@@ -43,6 +44,7 @@ const LanguageRouter = () => {
       <Route path="/experience" element={<ExperiencePage />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:slug" element={<BlogPostPage />} />
       <Route path="/portfolio/:slug" element={<PortfolioDetails />} />
       <Route path="/coming-soon" element={<ComingSoonPage />} />
       <Route path="/ai-proficiency-challenge" element={<XRAIProficiencyChallenge />} />
