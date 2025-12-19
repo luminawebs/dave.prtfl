@@ -1961,6 +1961,50 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.hero .scroll-down-arrow,
+.hero-banner .scroll-down-arrow {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  z-index: 11;
+}
+
+.hero .scroll-down-arrow i,
+.hero-banner .scroll-down-arrow i {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.hero .scroll-down-arrow:hover,
+.hero-banner .scroll-down-arrow:hover {
+  transform: translateX(-50%) translateY(2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+}
+
+@keyframes scrollPulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.08); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+.hero .scroll-down-arrow,
+.hero-banner .scroll-down-arrow {
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
 /*--------------------------------------------------------------
 # Hero Banner Carousel
 --------------------------------------------------------------*/

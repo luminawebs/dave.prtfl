@@ -206,6 +206,13 @@ const HeroBanner = () => {
             />
           ))}
         </div>
+        <button
+          className="scroll-down-arrow"
+          aria-label={t('hero.carousel.controls.nextLabel')}
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          <i className="bi bi-chevron-down"></i>
+        </button>
       </div>
     </div>
   );

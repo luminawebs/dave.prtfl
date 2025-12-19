@@ -48,6 +48,9 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
+        <a href="#case-studies" className="scroll-down-arrow" aria-label="Scroll down">
+          <i className="bi bi-chevron-down"></i>
+        </a>
       </section>
 
       <section id="trusted" className="section">
@@ -298,4 +301,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

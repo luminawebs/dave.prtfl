@@ -37,6 +37,9 @@ const ExperiencePage = () => {
             </div>
           </div>
         </div>
+        <a href="#experience" className="scroll-down-arrow" aria-label="Scroll down">
+          <i className="bi bi-chevron-down"></i>
+        </a>
       </section>
 
       {/* Professional Experience Section */}
