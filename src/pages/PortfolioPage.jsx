@@ -217,6 +217,26 @@ const PortfolioPage = () => {
                 </article>
               </div>
 
+              <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
+                <article className="portfolio-entry" onClick={() => handleProjectClick(7)}>
+                  <figure className="entry-image">
+                    <img src="/assets/img/portfolio/carrom-competitor-audit.png" className="img-fluid" alt="" loading="lazy" />
+                    <div className="overlay-content">
+                      <div className="entry-meta">UX Research</div>
+                      <h3 className="entry-title">Carrom Competitor Audit - UX Research</h3>
+                      <div className="entry-links">
+                        <button
+                          onClick={() => handleProjectClick(7)}
+                          style={{ background: 'none', border: 'none', padding: 0, color: 'inherit' }}
+                        >
+                          <i className="bi bi-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </figure>
+                </article>
+              </div>
+
 
               {/* <div className={`col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui ${filter === '*' || filter === '.filter-ui' ? 'd-block' : 'd-none'}`}>
                 <article className="portfolio-entry" onClick={() => handleProjectClick(3)}>

@@ -561,6 +561,11 @@ const PortfolioDetails = () => {
                           <div className="col-12">
                             <div className="row g-3">
                               <div className="col-12" dangerouslySetInnerHTML={{ __html: project.iframeHtml }} />
+                              {Array.isArray(project.additionalHtml) && project.additionalHtml.length > 0 && (
+                                project.additionalHtml.map((html, i) => (
+                                  <div key={`add-${i}`} className="col-12" dangerouslySetInnerHTML={{ __html: html }} />
+                                ))
+                              )}
                             </div>
                           </div>
                         )}

@@ -207,6 +207,35 @@ Community Building: Strong user engagement with peer support and community featu
     nextProjectUrl: "#"
   }
   ,
+  7: {
+    title: "Carrom Competitor Audit - UX Research",
+    badge: "UX Research",
+    template: "image-gallery",
+    date: "December 2025",
+    client: "UX Research Study",
+    website: "",
+    websiteUrl: "#",
+    description: "Comparing the user experience of most popular Carrom games in mobile Android devices.",
+    iframeHtml: `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600" src="https://embed.figma.com/slides/buO21HGZtrmpkshnS5M1bA/Carrom-Competitor-Audit?node-id=1-531&embed-host=share" allowfullscreen sandbox="allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-popups allow-presentation"></iframe>`,
+    additionalHtml: [
+      `<div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/354319/54a7a734-45ff-44e9-b460-454b6dd0fc5f?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>`,
+      `<img src="/assets/img/portfolio/carrom/treemap.png" alt="Proposed Carrom Treemap" style="width:100%;height:auto;border-radius:10px;" />`,
+      `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/naCn5R2X1a0EB072xqNwQX/Carrom-UI?page-id=0%3A1&node-id=22-483&viewport=-1459%2C-539%2C0.47&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A390&show-proto-sidebar=1&embed-host=share" allowfullscreen sandbox="allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-popups allow-presentation"></iframe>`
+    ],
+    mainImages: [
+      "/assets/img/portfolio/portfolio-2.webp"
+    ],
+    thumbnailImages: [],
+    techStack: ["Figma", "UX Research", "Android", "Benchmarking"],
+    features: [
+      "Competitor Analysis",
+      "Mobile UX Benchmark",
+      "Actionable Insights"
+    ],
+    liveProjectUrl: "#",
+    nextProjectUrl: "#"
+  }
+  ,
   4: {
     title: "3D Avatars for Education",
     badge: "3D Animation",
