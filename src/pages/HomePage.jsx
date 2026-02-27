@@ -34,7 +34,7 @@ const HomePage = () => {
           <div className="d-flex gap-3 mt-4">
             <Link
               to={getLocalizedPath('/contact')}
-              className="btn btn-primary"
+              className="btn btn-cta"
               onClick={() => trackButtonClick('Hire Me', 'Hero')}
             >
               {t('home.hero.cta.hire')}
@@ -60,10 +60,10 @@ const HomePage = () => {
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="d-flex flex-wrap gap-3 align-items-center">
-            <span className="badge bg-light text-dark">Capgemini</span>
-            <span className="badge bg-light text-dark">EAN University</span>
-            <span className="badge bg-light text-dark">Sector Público</span>
-            <span className="badge bg-light text-dark">EdTech</span>
+            <span style={{ padding: '8px 16px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', boxShadow: '0 4px 10px rgba(0,0,0,0.2)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: '600', letterSpacing: '0.5px' }}>Capgemini</span>
+            <span style={{ padding: '8px 16px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', boxShadow: '0 4px 10px rgba(0,0,0,0.2)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: '600', letterSpacing: '0.5px' }}>EAN University</span>
+            <span style={{ padding: '8px 16px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', boxShadow: '0 4px 10px rgba(0,0,0,0.2)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: '600', letterSpacing: '0.5px' }}>Sector Público</span>
+            <span style={{ padding: '8px 16px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', boxShadow: '0 4px 10px rgba(0,0,0,0.2)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: '600', letterSpacing: '0.5px' }}>EdTech</span>
           </div>
         </div>
       </section>
@@ -76,26 +76,29 @@ const HomePage = () => {
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
-              <div className="service-card h-100">
-                <h3>{t('home.what.uiux.title')}</h3>
-                <ul className="list-unstyled mt-3">
-                  {t('home.what.uiux.items').map((i, idx) => (<li key={`uiux-${idx}`}>{i}</li>))}
+              <div className="service-card h-100" style={{ background: 'var(--surface-color)', border: '1px solid rgba(25, 249, 105, 0.2)', boxShadow: '0 0 20px rgba(25, 249, 105, 0.05)', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(25, 249, 105, 0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(25, 249, 105, 0.05)'; }}>
+                <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(25, 249, 105, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}><i className="bi bi-palette" style={{ fontSize: '1.5rem', color: 'var(--accent-color)' }}></i></div>
+                <h3 style={{ color: 'var(--heading-color)', fontSize: '1.5rem', marginBottom: '1rem' }}>{t('home.what.uiux.title')}</h3>
+                <ul className="list-unstyled mt-3" style={{ color: 'var(--default-color)' }}>
+                  {t('home.what.uiux.items').map((i, idx) => (<li key={`uiux-${idx}`} className="mb-2"><i className="bi bi-check-circle-fill me-2" style={{ color: 'var(--accent-color)', fontSize: '0.9rem' }}></i> {i}</li>))}
                 </ul>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="service-card h-100">
-                <h3>{t('home.what.frontend.title')}</h3>
-                <ul className="list-unstyled mt-3">
-                  {t('home.what.frontend.items').map((i, idx) => (<li key={`fe-${idx}`}>{i}</li>))}
+              <div className="service-card h-100" style={{ background: 'var(--surface-color)', border: '1px solid rgba(25, 249, 105, 0.2)', boxShadow: '0 0 20px rgba(25, 249, 105, 0.05)', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(25, 249, 105, 0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(25, 249, 105, 0.05)'; }}>
+                <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(25, 249, 105, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}><i className="bi bi-code-slash" style={{ fontSize: '1.5rem', color: 'var(--accent-color)' }}></i></div>
+                <h3 style={{ color: 'var(--heading-color)', fontSize: '1.5rem', marginBottom: '1rem' }}>{t('home.what.frontend.title')}</h3>
+                <ul className="list-unstyled mt-3" style={{ color: 'var(--default-color)' }}>
+                  {t('home.what.frontend.items').map((i, idx) => (<li key={`fe-${idx}`} className="mb-2"><i className="bi bi-check-circle-fill me-2" style={{ color: 'var(--accent-color)', fontSize: '0.9rem' }}></i> {i}</li>))}
                 </ul>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="service-card h-100">
-                <h3>{t('home.what.lxd.title')}</h3>
-                <ul className="list-unstyled mt-3">
-                  {t('home.what.lxd.items').map((i, idx) => (<li key={`lxd-${idx}`}>{i}</li>))}
+              <div className="service-card h-100" style={{ background: 'var(--surface-color)', border: '1px solid rgba(25, 249, 105, 0.2)', boxShadow: '0 0 20px rgba(25, 249, 105, 0.05)', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(25, 249, 105, 0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(25, 249, 105, 0.05)'; }}>
+                <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(25, 249, 105, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}><i className="bi bi-book" style={{ fontSize: '1.5rem', color: 'var(--accent-color)' }}></i></div>
+                <h3 style={{ color: 'var(--heading-color)', fontSize: '1.5rem', marginBottom: '1rem' }}>{t('home.what.lxd.title')}</h3>
+                <ul className="list-unstyled mt-3" style={{ color: 'var(--default-color)' }}>
+                  {t('home.what.lxd.items').map((i, idx) => (<li key={`lxd-${idx}`} className="mb-2"><i className="bi bi-check-circle-fill me-2" style={{ color: 'var(--accent-color)', fontSize: '0.9rem' }}></i> {i}</li>))}
                 </ul>
               </div>
             </div>
@@ -120,26 +123,26 @@ const HomePage = () => {
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
-              <div className="card h-100">
+              <div className="card h-100" style={{ background: 'linear-gradient(135deg, rgba(27, 38, 44, 0.8) 0%, rgba(3, 17, 25, 0.9) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', borderRadius: '24px', border: '1px solid rgba(255, 255, 255, 0.08)', padding: '1rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.4)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                 <div className="card-body">
-                  <h3 className="card-title">{t('home.case.cards.0.title')}</h3>
-                  <p className="card-text">{t('home.case.cards.0.text')}</p>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.case.cards.0.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.case.cards.0.text')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="card h-100">
+              <div className="card h-100" style={{ background: 'linear-gradient(135deg, rgba(27, 38, 44, 0.8) 0%, rgba(3, 17, 25, 0.9) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', borderRadius: '24px', border: '1px solid rgba(255, 255, 255, 0.08)', padding: '1rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.4)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                 <div className="card-body">
-                  <h3 className="card-title">{t('home.case.cards.1.title')}</h3>
-                  <p className="card-text">{t('home.case.cards.1.text')}</p>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.case.cards.1.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.case.cards.1.text')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="card h-100">
+              <div className="card h-100" style={{ background: 'linear-gradient(135deg, rgba(27, 38, 44, 0.8) 0%, rgba(3, 17, 25, 0.9) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', borderRadius: '24px', border: '1px solid rgba(255, 255, 255, 0.08)', padding: '1rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.4)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}>
                 <div className="card-body">
-                  <h3 className="card-title">{t('home.case.cards.2.title')}</h3>
-                  <p className="card-text">{t('home.case.cards.2.text')}</p>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.case.cards.2.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.case.cards.2.text')}</p>
                 </div>
               </div>
             </div>
@@ -156,6 +159,33 @@ const HomePage = () => {
         </div>
       </section>
 
+      <section id="design-system-preview" className="section" style={{ backgroundColor: 'var(--surface-color)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(25, 249, 105, 0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', bottom: '-50%', right: '-20%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(25, 249, 105, 0.05) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Design System</h2>
+          <p>Explore the visual foundation</p>
+        </div>
+        <div className="container text-center" data-aos="fade-up" data-aos-delay="100">
+          <p className="lead mb-4" style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--default-color)' }}>
+            A comprehensive guide showcasing this page core tokens, typography, glowing glassmorphism components, and neon accents. Use if you need a reusable design system.
+          </p>
+          <Link
+            to={getLocalizedPath('/design-system')}
+            className="btn btn-primary"
+            style={{
+              boxShadow: '0 0 20px rgba(25, 249, 105, 0.3)',
+              padding: '14px 32px',
+              fontSize: '1.1rem'
+            }}
+            onClick={() => trackButtonClick('View Design System', 'Design System Preview')}
+          >
+            Explore Design System <i className="bi bi-arrow-right ms-2"></i>
+          </Link>
+        </div>
+      </section>
+
       <section id="process" className="section">
         <div className="container section-title" data-aos="fade-up">
           <h2>{t('home.process.title')}</h2>
@@ -164,34 +194,38 @@ const HomePage = () => {
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row g-4">
             <div className="col-lg-3 col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h3 className="card-title">{t('home.process.steps.0.title')}</h3>
-                  <p className="card-text">{t('home.process.steps.0.text')}</p>
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '1.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.process.steps.0.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.process.steps.0.text')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h3 className="card-title">{t('home.process.steps.1.title')}</h3>
-                  <p className="card-text">{t('home.process.steps.1.text')}</p>
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '1.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.process.steps.1.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.process.steps.1.text')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h3 className="card-title">{t('home.process.steps.2.title')}</h3>
-                  <p className="card-text">{t('home.process.steps.2.text')}</p>
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '1.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.process.steps.2.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.process.steps.2.text')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h3 className="card-title">{t('home.process.steps.3.title')}</h3>
-                  <p className="card-text">{t('home.process.steps.3.text')}</p>
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '1.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h3 className="card-title" style={{ color: 'var(--heading-color)', fontSize: '1.25rem' }}>{t('home.process.steps.3.title')}</h3>
+                  <p className="card-text" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{t('home.process.steps.3.text')}</p>
                 </div>
               </div>
             </div>
@@ -208,36 +242,36 @@ const HomePage = () => {
             <div className="col-lg-6">
               <h4>{t('home.stack.design.title')}</h4>
               <div className="d-flex flex-wrap gap-2">
-                <span className="badge bg-light text-dark">Figma</span>
-                <span className="badge bg-light text-dark">Adobe XD</span>
-                <span className="badge bg-light text-dark">Prototyping</span>
-                <span className="badge bg-light text-dark">UX Research</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Figma</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Adobe XD</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Prototyping</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>UX Research</span>
               </div>
             </div>
             <div className="col-lg-6">
               <h4>{t('home.stack.frontend.title')}</h4>
               <div className="d-flex flex-wrap gap-2">
-                <span className="badge bg-light text-dark">HTML5</span>
-                <span className="badge bg-light text-dark">CSS3</span>
-                <span className="badge bg-light text-dark">JavaScript</span>
-                <span className="badge bg-light text-dark">React</span>
-                <span className="badge bg-light text-dark">Angular</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>HTML5</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>CSS3</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>JavaScript</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>React</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Angular</span>
               </div>
             </div>
             <div className="col-lg-6">
               <h4>{t('home.stack.elearning.title')}</h4>
               <div className="d-flex flex-wrap gap-2">
-                <span className="badge bg-light text-dark">Storyline</span>
-                <span className="badge bg-light text-dark">Rise</span>
-                <span className="badge bg-light text-dark">SCORM</span>
-                <span className="badge bg-light text-dark">xAPI</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Storyline</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Rise</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>SCORM</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>xAPI</span>
               </div>
             </div>
             <div className="col-lg-6">
               <h4>{t('home.stack.methods.title')}</h4>
               <div className="d-flex flex-wrap gap-2">
-                <span className="badge bg-light text-dark">SCRUM</span>
-                <span className="badge bg-light text-dark">Design Thinking</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>SCRUM</span>
+                <span style={{ padding: '6px 14px', background: '#1A1C2E', color: 'var(--accent-color)', border: '1px solid rgba(25, 249, 105, 0.4)', borderRadius: '20px', fontSize: '0.85rem' }}>Design Thinking</span>
               </div>
             </div>
           </div>

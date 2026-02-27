@@ -15,6 +15,7 @@ const CoursesPage = lazy(() => import('../pages/CoursesPage'));
 const ExperiencePage = lazy(() => import('../pages/ExperiencePage'));
 const ComingSoonPage = lazy(() => import('../pages/ComingSoonPage'));
 const XRAIProficiencyChallenge = lazy(() => import('../components/G-01-AIProficiency'));
+const DesignSystemPage = lazy(() => import('../pages/DesignSystemPage'));
 
 const LanguageRouter = () => {
   const { lang } = useParams();
@@ -48,6 +49,7 @@ const LanguageRouter = () => {
       <Route path="/portfolio/:slug" element={<PortfolioDetails />} />
       <Route path="/coming-soon" element={<ComingSoonPage />} />
       <Route path="/ai-proficiency-challenge" element={<XRAIProficiencyChallenge />} />
+      <Route path="/design-system" element={<DesignSystemPage />} />
     </Routes>
   );
 };

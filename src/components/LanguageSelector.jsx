@@ -12,27 +12,27 @@ const LanguageSelector = ({ className = '', style = {} }) => {
     // Get current path without language prefix
     const currentPath = location.pathname;
     const pathWithoutLang = currentPath.replace(/^\/[a-z]{2}/, '') || '/';
-    
+
     // Navigate to new language path
     const newPath = getLocalizedPath(pathWithoutLang, newLanguage);
     navigate(newPath);
-    
+
     // Update language state
     switchLanguage(newLanguage);
-    
+
     // Track the language switch
     trackButtonClick(`Language Switch - ${newLanguage}`, 'Language Selector');
   };
 
   return (
     <div className={`language-selector ${className}`} style={style}>
-      <button 
+      <button
         onClick={() => handleLanguageChange('es')}
         style={{
           background: 'none',
           border: 'none',
           textDecoration: 'none',
-          color: language === 'es' ? '#e3a127' : '#6c757d',
+          color: language === 'es' ? 'var(--accent-color)' : '#6c757d',
           fontWeight: language === 'es' ? 'bold' : 'normal',
           fontSize: '14px',
           marginRight: '8px',
@@ -44,13 +44,13 @@ const LanguageSelector = ({ className = '', style = {} }) => {
         esp
       </button>
       <span style={{ color: '#6c757d', fontSize: '14px' }}>|</span>
-      <button 
+      <button
         onClick={() => handleLanguageChange('en')}
         style={{
           background: 'none',
           border: 'none',
           textDecoration: 'none',
-          color: language === 'en' ? '#e3a127' : '#6c757d',
+          color: language === 'en' ? 'var(--accent-color)' : '#6c757d',
           fontWeight: language === 'en' ? 'bold' : 'normal',
           fontSize: '14px',
           marginLeft: '8px',
@@ -62,13 +62,13 @@ const LanguageSelector = ({ className = '', style = {} }) => {
         eng
       </button>
       <span style={{ color: '#6c757d', fontSize: '14px', marginLeft: '8px', marginRight: '8px' }}>|</span>
-      <button 
+      <button
         onClick={() => handleLanguageChange('de')}
         style={{
           background: 'none',
           border: 'none',
           textDecoration: 'none',
-          color: language === 'de' ? '#e3a127' : '#6c757d',
+          color: language === 'de' ? 'var(--accent-color)' : '#6c757d',
           fontWeight: language === 'de' ? 'bold' : 'normal',
           fontSize: '14px',
           cursor: 'pointer',

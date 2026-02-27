@@ -37,7 +37,7 @@
   /* background-color: #0d1d26;
   padding: 20px ;
   border-radius: 20px; */
-/* background-color: red; */
+  /* background-color: red; */
 }
 
 .timeline-item:last-child {
@@ -242,10 +242,12 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.8;
   }
+
   70% {
     transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(2);
     opacity: 0;
@@ -274,41 +276,41 @@
   .timeline-container::before {
     left: 30px;
   }
-  
+
   .timeline-item {
     justify-content: flex-start !important;
     margin-bottom: 40px;
   }
-  
+
   .timeline-content {
     width: calc(100% - 80px);
     margin-left: 60px;
   }
-  
+
   .timeline-content::before {
     left: -24px !important;
     right: auto !important;
     border-left-color: transparent !important;
     border-right-color: var(--surface-color) !important;
   }
-  
+
   .timeline-content:hover::before {
     border-right-color: var(--accent-color) !important;
     border-left-color: transparent !important;
   }
-  
+
   .timeline-dot {
     left: 30px;
   }
-  
+
   .timeline-content {
     padding: 24px;
   }
-  
+
   .timeline-title {
     font-size: 1.2rem;
   }
-  
+
   .timeline-description {
     font-size: 0.9rem;
   }
@@ -318,36 +320,36 @@
   .timeline-container::before {
     left: 20px;
   }
-  
+
   .timeline-dot {
     left: 20px;
     width: 14px;
     height: 14px;
   }
-  
+
   .timeline-content {
     width: calc(100% - 60px);
     margin-left: 45px;
     padding: 20px;
   }
-  
+
   .timeline-year {
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
-  
+
   .timeline-title {
     font-size: 1.1rem;
   }
-  
+
   .timeline-company {
     font-size: 0.9rem;
   }
-  
+
   .timeline-description {
     font-size: 0.85rem;
   }
-  
+
   .timeline-tag {
     font-size: 0.75rem;
     padding: 4px 10px;
@@ -367,12 +369,29 @@
 }
 
 /* Staggered animation delay */
-.timeline-item:nth-child(1) { transition-delay: 0.1s; }
-.timeline-item:nth-child(2) { transition-delay: 0.2s; }
-.timeline-item:nth-child(3) { transition-delay: 0.3s; }
-.timeline-item:nth-child(4) { transition-delay: 0.4s; }
-.timeline-item:nth-child(5) { transition-delay: 0.5s; }
-.timeline-item:nth-child(n+6) { transition-delay: 0.6s; }
+.timeline-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.timeline-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.timeline-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.timeline-item:nth-child(n+6) {
+  transition-delay: 0.6s;
+}
 
 /* Timeline Card Styles */
 .timeline-card {
@@ -729,7 +748,7 @@
     text-align: left;
     margin-top: 0.75rem;
   }
-  
+
   .timeline-card .period-info {
     flex-direction: column;
     align-items: flex-start;
@@ -741,44 +760,45 @@
   .timeline-card {
     margin-bottom: 1.5rem;
   }
-  
+
   .timeline-card .card-header,
   .timeline-card .card-body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  
+
   .timeline-card .card-header {
     padding-top: 1.5rem;
     padding-bottom: 0.75rem;
   }
-  
+
   .timeline-card .card-body {
     padding-bottom: 1.5rem;
   }
-  
+
   .timeline-card .position-title {
     font-size: 1.3rem;
   }
-  
+
   .timeline-card .company-name {
     font-size: 1rem;
   }
-  
+
   .timeline-card .achievements,
   .timeline-card .technologies {
     padding: 1rem;
   }
-  
+
   .timeline-card .tech-tags {
     gap: 0.4rem;
   }
-  
+
   .timeline-card .tech-tag {
     font-size: 0.75rem;
     padding: 0.35rem 0.6rem;
   }
 }
+
 .portfolio-details-modal {
   position: fixed;
   top: 0;
@@ -848,11 +868,11 @@
     max-height: 100vh;
     border-radius: 0;
   }
-  
+
   .portfolio-details-modal .portfolio-details {
     padding: 80px 15px 30px;
   }
-  
+
   .portfolio-details-modal .modal-close {
     top: 15px;
     right: 15px;
@@ -902,6 +922,7 @@
     opacity: 0;
     backdrop-filter: blur(0px);
   }
+
   to {
     opacity: 1;
     backdrop-filter: blur(5px);
@@ -917,6 +938,7 @@
     transform: translateY(-50px) scale(0.95);
     opacity: 0;
   }
+
   to {
     transform: translateY(0) scale(1);
     opacity: 1;
@@ -937,29 +959,43 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito Sans",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Parkinsans", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --heading-font: "KoHo", sans-serif;
+  --nav-font: "KoHo", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #031119; /* Background color for the entire website, including individual sections */
-  --default-color: rgba(255, 255, 255, 0.8); /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #e0e9f2; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #19F969; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1b262c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #031119;
+  /* Background color for the entire website, including individual sections */
+  --default-color: rgba(255, 255, 255, 0.8);
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #e0e9f2;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #19F969;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #1b262c;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --cta-color: #FA1985;
+  /* important call to actions */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: #19F969; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: rgba(255, 255, 255, 0.8); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #19F969; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.8);
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #19F969;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #29343a;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #29343a;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: rgba(255, 255, 255, 0.8);
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #19F969;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1078,12 +1114,16 @@ h6 {
 
 .header .header-container {
   background: var(--surface-color);
-  -webkit-backdrop-filter: blur(7.2px);
-  backdrop-filter: blur(7.2px);
-  background-color: rgba(27, 38, 44, 0.76);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(27, 38, 44, 0.85);
+  /* Slightly darker for better contrast */
+  border: 1px solid rgba(25, 249, 105, 0.2);
+  /* Neon border trace */
   border-radius: 50px;
   padding: 5px 25px 5px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(25, 249, 105, 0.1) inset;
+  /* Outer shadow + inner neon glow */
 }
 
 .header .logo {
@@ -1106,25 +1146,29 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #fff;
+  background: var(--cta-color);
   font-size: 14px;
-  padding: 8px 20px;
+  padding: 8px 24px;
   margin: 0 0 0 30px;
   border-radius: 50px;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(250, 25, 133, 0.4);
 }
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: #fff;
+  background: color-mix(in srgb, var(--cta-color), white 20%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 25, 133, 0.6);
 }
 
 
 .header .btn-getstarted {
   display: initial;
-  }
+}
 
 @media (max-width: 1200px) {
   .header {
@@ -1145,7 +1189,7 @@ h6 {
     order: 2;
     margin: 0 10px 0 0;
     padding: 6px 15px;
-  display:none;
+    display: none;
   }
 
   .header .navmenu {
@@ -1214,7 +1258,8 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(25, 249, 105, 0.4);
   }
 
   .navmenu .dropdown ul {
@@ -1337,7 +1382,8 @@ h6 {
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
-    color: var(--contrast-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px rgba(25, 249, 105, 0.4);
   }
 
   .navmenu a:hover,
@@ -1349,8 +1395,9 @@ h6 {
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color);
-    color: var(--contrast-color);
+    color: var(--background-color);
     transform: rotate(180deg);
+    box-shadow: 0 0 10px rgba(25, 249, 105, 0.4);
   }
 
   .navmenu .dropdown ul {
@@ -1658,7 +1705,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -1976,7 +2023,7 @@ section,
   background-color: var(--accent-color);
   color: var(--contrast-color);
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
   z-index: 11;
 }
@@ -1990,14 +2037,22 @@ section,
 .hero .scroll-down-arrow:hover,
 .hero-banner .scroll-down-arrow:hover {
   transform: translateX(-50%) translateY(2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
 }
 
 @keyframes scrollPulse {
-  0% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.08); }
-  100% { transform: translateX(-50%) scale(1); }
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.08);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .hero .scroll-down-arrow,
@@ -2176,15 +2231,15 @@ section,
     width: 40px;
     height: 40px;
   }
-  
+
   .hero-banner .carousel-control.prev {
     left: -20px;
   }
-  
+
   .hero-banner .carousel-control.next {
     right: -20px;
   }
-  
+
   .hero-banner .carousel-control i {
     font-size: 1rem;
   }
@@ -2225,7 +2280,7 @@ section,
   .hero-banner .slide-indicators {
     bottom: -30px;
   }
-  
+
   .hero-banner .indicator {
     width: 6px;
     height: 6px;
@@ -2238,6 +2293,7 @@ section,
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2249,6 +2305,7 @@ section,
     opacity: 0;
     width: 0;
   }
+
   to {
     opacity: 1;
     width: 60%;
@@ -2342,7 +2399,8 @@ section,
 .hero-banner .video-embed {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
   border-radius: 20px;
   overflow: hidden;
 }
@@ -2419,7 +2477,7 @@ section,
     min-height: 300px;
     margin-top: 2rem;
   }
-  
+
   .hero-banner .stats-overlay {
     position: relative;
     bottom: auto;
@@ -2433,20 +2491,20 @@ section,
   .hero-banner .media-placeholder {
     min-height: 250px;
   }
-  
+
   .hero-banner .placeholder-icon {
     font-size: 3rem;
   }
-  
+
   .hero-banner .placeholder-text {
     font-size: 1rem;
   }
-  
+
   .hero-banner .stats-overlay {
     padding: 1rem;
     min-width: 120px;
   }
-  
+
   .hero-banner .stats-overlay .stats-number h3 {
     font-size: 2rem;
   }
@@ -2536,19 +2594,19 @@ section,
   transition: all 0.3s ease;
 }
 
- .feature-item:hover {
+.feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
- .feature-item i {
+.feature-item i {
   font-size: 1.75rem;
   color: var(--accent-color);
   margin-bottom: 0.75rem;
   display: block;
 }
 
- .feature-item h5 {
+.feature-item h5 {
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
@@ -5284,43 +5342,49 @@ section,
 
 
 .php-email-form .loading {
-    display: none;
-    text-align: center;
-    padding: 15px;
+  display: none;
+  text-align: center;
+  padding: 15px;
 }
+
 .php-email-form .error-message {
-    display: none;
-    color: #721c24;
-    background: #f8d7da;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 15px;
+  display: none;
+  color: #721c24;
+  background: #f8d7da;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
 }
+
 .php-email-form .sent-message {
-    display: none;
-    color: #155724;
-    background: #d4edda;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 15px;
+  display: none;
+  color: #155724;
+  background: #d4edda;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
 }
+
 .input-with-icon {
-    position: relative;
+  position: relative;
 }
+
 .input-with-icon i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6c757d;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
 }
+
 .input-with-icon input,
 .input-with-icon textarea {
-    padding-left: 40px;
+  padding-left: 40px;
 }
+
 .input-with-icon .message-icon {
-    top: 20px;
-    transform: none;
+  top: 20px;
+  transform: none;
 }
 
 
@@ -5333,106 +5397,206 @@ section,
 
 
 
-        .tooltip {
-            position: relative;
-        }
-        .tooltip:hover::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1f2937;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            white-space: nowrap;
-            z-index: 10;
-        }
-        .error {
-            color: #dc2626;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-        }
-        /* Bootstrap Tab Pane Styles */
-        .tab-pane {
-            display: none;
-        }
-        .tab-pane.show.active {
-            display: block;
-        }
-        .tab-content {
-            margin-top: 0;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tab.active {
-            background-color: #2563eb !important;
-            color: white !important;
-        }
-        .tab:hover {
-            background-color: #3b82f6;
-            color: white;
-        }
-        
-        /* Tooltip styles for cost explanations */
-        .tooltip-trigger {
-            position: relative;
-            cursor: help;
-        }
-        
-        .tooltip-trigger:hover::after {
-            content: attr(title);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #2d3748;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            white-space: nowrap;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.2s ease-in;
-            max-width: 250px;
-            white-space: normal;
-            text-align: center;
-            line-height: 1.3;
-        }
-        
-        .tooltip-trigger:hover::before {
-            content: '';
-            position: absolute;
-            bottom: 95%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 5px solid transparent;
-            border-top-color: #2d3748;
-            z-index: 1001;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Ensure tooltips are visible on small screens */
-        @media (max-width: 768px) {
-            .tooltip-trigger:hover::after {
-                bottom: auto;
-                top: 100%;
-                margin-top: 8px;
-            }
-            
-            .tooltip-trigger:hover::before {
-                bottom: auto;
-                top: 95%;
-                border-top-color: transparent;
-                border-bottom-color: #2d3748;
-            }
-        }
-  
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Bootstrap Tab Pane Styles */
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.show.active {
+  display: block;
+}
+
+.tab-content {
+  margin-top: 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab.active {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.tab:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Tooltip styles for cost explanations */
+.tooltip-trigger {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip-trigger:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2d3748;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.2s ease-in;
+  max-width: 250px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.tooltip-trigger:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #2d3748;
+  z-index: 1001;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ensure tooltips are visible on small screens */
+@media (max-width: 768px) {
+  .tooltip-trigger:hover::after {
+    bottom: auto;
+    top: 100%;
+    margin-top: 8px;
+  }
+
+  .tooltip-trigger:hover::before {
+    bottom: auto;
+    top: 95%;
+    border-top-color: transparent;
+    border-bottom-color: #2d3748;
+  }
+}
+
+/* --- OVERRIDES (Gradients & Buttons) --- */
+
+.main {
+  background: linear-gradient(135deg, #031119 0%, #081e2b 30%, #031119 70%, #0e2938 100%);
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientScroll 15s ease infinite;
+}
+
+@keyframes gradientScroll {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-primary,
+.btn-primary:active {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--background-color) !important;
+  box-shadow: 0 4px 15px rgba(25, 249, 105, 0.3) !important;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: color-mix(in srgb, var(--accent-color), white 20%) !important;
+  border-color: color-mix(in srgb, var(--accent-color), white 20%) !important;
+  color: var(--background-color) !important;
+  box-shadow: 0 4px 20px rgba(25, 249, 105, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.btn-cta {
+  background-color: var(--cta-color) !important;
+  border-color: var(--cta-color) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(250, 25, 133, 0.4) !important;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: color-mix(in srgb, var(--cta-color), white 20%) !important;
+  border-color: color-mix(in srgb, var(--cta-color), white 20%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(250, 25, 133, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent !important;
+  border: 2px solid var(--accent-color) !important;
+  color: var(--accent-color) !important;
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--accent-color) !important;
+  color: var(--background-color) !important;
+  box-shadow: 0 4px 20px rgba(25, 249, 105, 0.4) !important;
+  transform: translateY(-2px);
+}

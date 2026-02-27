@@ -6,7 +6,8 @@
   align-items: center;
   position: relative;
   padding: 60px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: var(--background-color);
+  animation: none;
 }
 
 /* Main row container */
@@ -22,8 +23,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #007bff;
+  background: var(--surface-color);
+  border: 2px solid var(--accent-color);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -33,15 +34,15 @@
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
-  color: #007bff;
+  color: var(--accent-color);
   font-size: 20px;
 }
 
 .carousel-control:hover {
-  background: #007bff;
-  color: white;
+  background: var(--accent-color);
+  color: var(--background-color);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(25, 249, 105, 0.3);
 }
 
 .carousel-control.prev {
@@ -123,7 +124,7 @@
 .main-heading h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #212529;
+  color: var(--heading-color);
   margin-bottom: 20px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -131,9 +132,10 @@
 }
 
 .highlight-text {
-  color: #007bff;
+  color: var(--accent-color);
   font-weight: 800;
   position: relative;
+  text-shadow: 0 0 15px rgba(25, 249, 105, 0.4);
 }
 
 .highlight-text::after {
@@ -143,21 +145,23 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: linear-gradient(90deg, var(--accent-color), rgba(25, 249, 105, 0.2));
   border-radius: 2px;
+  box-shadow: 0 0 10px rgba(25, 249, 105, 0.5);
 }
 
 .divider {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: linear-gradient(90deg, var(--accent-color), rgba(25, 249, 105, 0.2));
   margin: 20px auto;
   border-radius: 2px;
+  box-shadow: 0 0 10px rgba(25, 249, 105, 0.5);
 }
 
 .description p {
   font-size: 1.2rem;
-  color: #6c757d;
+  color: var(--default-color);
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 90%;
@@ -169,7 +173,7 @@
 }
 
 .cta-button .btn {
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  background: var(--cta-color);
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -181,13 +185,13 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(250, 25, 133, 0.4);
 }
 
 .cta-button .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-  background: linear-gradient(135deg, #0056b3, #004085);
+  box-shadow: 0 6px 20px rgba(250, 25, 133, 0.6);
+  background: color-mix(in srgb, var(--cta-color), white 20%);
 }
 
 .cta-button .btn i {
@@ -364,15 +368,15 @@
   .carousel-control.prev {
     left: -15px;
   }
-  
+
   .carousel-control.next {
     right: -15px;
   }
-  
+
   .hero-banner .col-lg-6:first-of-type {
     padding-right: 20px;
   }
-  
+
   .hero-banner .col-lg-6:last-of-type {
     padding-left: 20px;
   }
@@ -383,43 +387,43 @@
     min-height: auto;
     padding: 40px 0;
   }
-  
+
   .hero-banner .row {
     flex-direction: column;
     min-height: auto;
   }
-  
+
   .carousel-control {
     display: none;
   }
-  
+
   .hero-banner .col-lg-6 {
     padding: 0 15px !important;
     margin-bottom: 40px;
   }
-  
+
   .hero-banner .col-lg-6:first-of-type {
     order: 1;
   }
-  
+
   .hero-banner .col-lg-6:last-of-type {
     order: 2;
   }
-  
+
   .main-heading h1 {
     font-size: 2.5rem;
   }
-  
+
   .description p {
     font-size: 1.1rem;
     max-width: 100%;
   }
-  
+
   .media-placeholder {
     max-width: 100%;
     height: 300px;
   }
-  
+
   .stats-overlay {
     position: static;
     margin-top: 20px;
@@ -431,30 +435,30 @@
   .hero-banner {
     padding: 30px 0;
   }
-  
+
   .main-heading h1 {
     font-size: 2rem;
   }
-  
+
   .description p {
     font-size: 1rem;
   }
-  
+
   .cta-button .btn {
     padding: 12px 25px;
     font-size: 1rem;
   }
-  
+
   .media-placeholder {
     height: 250px;
   }
-  
+
   .carousel-control {
     width: 40px;
     height: 40px;
     font-size: 16px;
   }
-  
+
   .slide-indicators .indicator {
     width: 10px;
     height: 10px;
@@ -465,24 +469,24 @@
   .main-heading h1 {
     font-size: 1.8rem;
   }
-  
+
   .description p {
     font-size: 0.95rem;
   }
-  
+
   .hero-banner .col-lg-6 {
     margin-bottom: 30px;
   }
-  
+
   .media-placeholder {
     height: 200px;
   }
-  
+
   .stats-overlay {
     padding: 10px 15px;
     gap: 10px;
   }
-  
+
   .stats-number h3 {
     font-size: 1.5rem;
   }
