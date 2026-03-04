@@ -56,8 +56,63 @@ Vercel is the easiest way to deploy React applications.
    ```
 4. Run `npm run deploy`.
 
+## 5. Deploying to DigitalOcean
+
+### Option A: DigitalOcean App Platform (Recommended)
+
+The App Platform is a fully managed solution that's very similar to Vercel or Netlify.
+
+1. Go to the [DigitalOcean Control Panel](https://cloud.digitalocean.com/).
+2. Click **Create** > **Apps**.
+3. Connect your GitHub repository.
+4. DigitalOcean should automatically detect the project as a **Static Site**.
+5. Set the **Build Command** to `npm run build`.
+6. Set the **Publish Directory** to `build`.
+7. Add your environment variables in the **Environment Variables** section.
+8. Click **Next** and **Create Resources**.
+
+### Option B: DigitalOcean Droplet (Nginx)
+
+If you're using a Droplet, you'll need to serve the static files using a web server like Nginx.
+
+1. Build the project locally or on a CI server: `npm run build`.
+2. Upload the `build/` folder to your Droplet (e.g., using `scp` or `rsync`).
+3. Configure Nginx to serve the directory. Example configuration for SPA routing:
+   ```nginx
+   server {
+       listen 80;
+       server_name yourdomain.com;
+       root /var/www/your-project/build;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+   }
+   ```
+4. Restart Nginx: `sudo systemctl restart nginx`.
+
 ---
 
-## CI/CD Verification
+## Troubleshooting
 
-The project includes a GitHub Action in `.github/workflows/verify-build.yml` that automatically verifies the build on every push or pull request to the `main` branch.
+### "Permission denied" when running scripts (Linux/Droplet)
+
+If you see `sh: line 1: .../node_modules/.bin/react-scripts: Permission denied`, it's usually because the execution bit is missing on the package binaries. This commonly happens if `node_modules` were copied from Windows or a zip file.
+
+**Fix:**
+Run the following command in your project root to grant execution permissions:
+```bash
+chmod +x node_modules/.bin/react-scripts
+```
+
+Or fix all binaries at once:
+```bash
+chmod -R +x node_modules/.bin
+```
+
+**Recommended:**
+Instead of copying `node_modules`, it is better to run `npm install` directly on the server (or use `npm ci` for clean builds).
+
+### Nginx 404 on Refresh
+If you can see the home page but get a 404 when you refresh an internal page (like `/blog`), ensure your Nginx configuration has the `try_files` directive as shown in the Droplet section above.
