@@ -1018,6 +1018,18 @@
   scroll-behavior: smooth;
 }
 
+/* Text Selection - Design System Accent */
+::selection {
+  background-color: rgba(25, 249, 105, 0.9);
+  /* Neon green at 30% opacity */
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: rgba(25, 249, 105, 0.9);
+  color: #ffffff;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -1118,7 +1130,7 @@ h6 {
   backdrop-filter: blur(10px);
   background-color: rgba(27, 38, 44, 0.85);
   /* Slightly darker for better contrast */
-  border: 1px solid rgba(25, 249, 105, 0.2);
+  /* border: 1px solid rgba(25, 249, 105, 0.2); */
   /* Neon border trace */
   border-radius: 50px;
   padding: 5px 8px 5px 30px;
@@ -1138,8 +1150,8 @@ h6 {
 .header .logo h1 {
   font-size: 20px;
   margin: 0;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 900;
+  /* text-transform: uppercase; */
   letter-spacing: 1.5px;
   color: var(--heading-color);
 }

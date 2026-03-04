@@ -1,0 +1,34 @@
+name: Verify Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run build
+      run: npm run build
+      env:
+        # Provide dummy values for environment variables required during build if any
+        CI: true
+        REACT_APP_EMAILJS_PUBLIC_KEY: dummy
+        REACT_APP_EMAILJS_SERVICE_ID: dummy
+        REACT_APP_EMAILJS_TEMPLATE_ID: dummy
+        REACT_APP_RECIPIENT_EMAIL: dummy@example.com
