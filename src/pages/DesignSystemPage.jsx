@@ -119,7 +119,7 @@ const DesignSystemPage = () => {
                   Body Text: This is standard body text. It uses the default font color heavily emphasizing readability. Our custom font stack uses Roboto. The text shouldn't be fully white to reduce eye strain, hence the use of rgba(255,255,255,0.8).
                 </p>
                 <p>
-                  <a href="#">This is an inline link</a>, styled with our accent color.
+                  <a href="#typography">This is an inline link</a>, styled with our accent color.
                 </p>
               </div>
             </div>

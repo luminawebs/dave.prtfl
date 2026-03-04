@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
 import { trackButtonClick, trackContactClick } from '../utils/unifiedAnalytics';
+import NeonGrassHero from '../components/GravityHero';
 
 
 const HomePage = () => {
@@ -26,29 +27,33 @@ const HomePage = () => {
 
   return (
     <main className="main">
-      <section id="hero" className="hero section">
-        <div className="container" data-aos="fade-up">
-          <h1 className="mb-3">{t('home.hero.title')}</h1>
-          <p className="lead">{t('home.hero.lead')}</p>
-          <p>{t('home.hero.description')}</p>
-          <div className="d-flex gap-3 mt-4">
-            <Link
-              to={getLocalizedPath('/contact')}
-              className="btn btn-cta"
-              onClick={() => trackButtonClick('Hire Me', 'Hero')}
-            >
-              {t('home.hero.cta.hire')}
-            </Link>
-            <Link
-              to={getLocalizedPath('/portfolio')}
-              className="btn btn-outline"
-              onClick={() => trackButtonClick('View Portfolio', 'Hero')}
-            >
-              {t('home.hero.cta.portfolio')}
-            </Link>
+      <section id="hero" className="hero section" style={{ position: 'relative', overflow: 'hidden', minHeight: '600px', display: 'flex', alignItems: 'center' }}>
+        <NeonGrassHero />
+
+        <div className="container" data-aos="fade-up" style={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
+          <div style={{ pointerEvents: 'auto' }}>
+            <h1 className="mb-3">{t('home.hero.title')}</h1>
+            <p className="lead">{t('home.hero.lead')}</p>
+            <p>{t('home.hero.description')}</p>
+            <div className="d-flex gap-3 mt-4">
+              <Link
+                to={getLocalizedPath('/contact')}
+                className="btn btn-cta"
+                onClick={() => trackButtonClick('Hire Me', 'Hero')}
+              >
+                {t('home.hero.cta.hire')}
+              </Link>
+              <Link
+                to={getLocalizedPath('/portfolio')}
+                className="btn btn-outline"
+                onClick={() => trackButtonClick('View Portfolio', 'Hero')}
+              >
+                {t('home.hero.cta.portfolio')}
+              </Link>
+            </div>
           </div>
         </div>
-        <a href="#case-studies" className="scroll-down-arrow" aria-label="Scroll down">
+        <a href="#case-studies" className="scroll-down-arrow" aria-label="Scroll down" style={{ position: 'absolute', zIndex: 3, pointerEvents: 'auto' }}>
           <i className="bi bi-chevron-down"></i>
         </a>
       </section>
@@ -278,55 +283,51 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="about" className="section">
-        <div className="container section-title" data-aos="fade-up">
-          <h2>{t('home.about.title')}</h2>
-          <p>{t('home.about.p1')}</p>
-          <p>{t('home.about.p2')}</p>
-        </div>
-        <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="d-flex gap-3">
-            <a
-              href="/CV.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline"
-              onClick={() => trackButtonClick('Download CV', 'About Me')}
-            >
-              {t('home.about.cta.cv')}
-            </a>
-            <Link
-              to={getLocalizedPath('/contact')}
-              className="btn btn-primary"
-              onClick={() => trackButtonClick('Contact Me', 'About Me')}
-            >
-              {t('home.about.cta.contact')}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <section className="section py-5">
+        <div className="container" data-aos="fade-up">
+          <div className="row g-4">
 
-      <section id="work-together" className="section">
-        <div className="container section-title" data-aos="fade-up">
-          <h2>{t('home.work.title')}</h2>
-          <p>{t('home.work.lead')}</p>
-        </div>
-        <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="d-flex gap-3">
-            <Link
-              to={getLocalizedPath('/contact')}
-              className="btn btn-primary"
-              onClick={() => trackButtonClick('Book a Call', 'Let’s Work Together')}
-            >
-              {t('home.work.cta.call')}
-            </Link>
-            <a
-              href="mailto:maurizioroca@hotmail.com"
-              className="btn btn-outline"
-              onClick={() => trackContactClick('Email', 'maurizioroca@hotmail.com')}
-            >
-              {t('home.work.cta.message')}
-            </a>
+            {/* About Column */}
+            <div className="col-lg-6" id="about">
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body d-flex flex-column" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '2.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h2 style={{ color: 'var(--heading-color)', marginBottom: '1.5rem', fontSize: '2rem' }}>{t('home.about.title')}</h2>
+                  <p style={{ color: 'var(--default-color)', fontSize: '1.05rem', marginBottom: '1rem', lineHeight: '1.6' }}>{t('home.about.p1')}</p>
+                  <p style={{ color: 'var(--default-color)', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: '1.6' }}>{t('home.about.p2')}</p>
+
+                  <div className="d-flex flex-wrap gap-3 mt-auto pt-3">
+                    <a href="/CV.txt" target="_blank" rel="noopener noreferrer" className="btn btn-outline" onClick={() => trackButtonClick('Download CV', 'About Me')}>
+                      {t('home.about.cta.cv')}
+                    </a>
+                    <Link to={getLocalizedPath('/contact')} className="btn btn-cta" onClick={() => trackButtonClick('Contact Me', 'About Me')}>
+                      {t('home.about.cta.contact')}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Work Together Column */}
+            <div className="col-lg-6" id="work-together">
+              <div className="card h-100" style={{ background: 'var(--surface-color)', borderRadius: '24px', padding: '1px', position: 'relative', overflow: 'hidden', transition: 'transform 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.6 }}></div>
+                <div className="card-body d-flex flex-column" style={{ background: 'var(--background-color)', borderRadius: '23px', padding: '2.5rem', height: '100%', position: 'relative', zIndex: 1 }}>
+                  <h2 style={{ color: 'var(--heading-color)', marginBottom: '1.5rem', fontSize: '2rem' }}>{t('home.work.title')}</h2>
+                  <p style={{ color: 'var(--default-color)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.6' }}>{t('home.work.lead')}</p>
+
+                  <div className="d-flex flex-wrap gap-3 mt-auto pt-3">
+                    <Link to={getLocalizedPath('/contact')} className="btn btn-cta" onClick={() => trackButtonClick('Book a Call', 'Let’s Work Together')}>
+                      {t('home.work.cta.call')}
+                    </Link>
+                    <a href="mailto:maurizioroca@hotmail.com" className="btn btn-outline" onClick={() => trackContactClick('Email', 'maurizioroca@hotmail.com')}>
+                      {t('home.work.cta.message')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
