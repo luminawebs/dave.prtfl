@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
+import { trackButtonClick } from '../utils/unifiedAnalytics';
 
 
 const Personajes3DPage = () => {

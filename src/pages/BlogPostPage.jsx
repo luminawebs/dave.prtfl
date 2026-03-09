@@ -13,6 +13,19 @@ const BlogPostPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const getYouTubeID = (url) => {
+    if (!url) return null;
+    const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    if (match && match[2].length === 11) {
+      return match[2];
+    }
+    if (url.length === 11 && !url.includes(' ')) {
+      return url;
+    }
+    return null;
+  };
+
   useEffect(() => {
     const loadPost = async () => {
       try {
@@ -100,11 +113,39 @@ const BlogPostPage = () => {
               {new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
             </small>
             <h1 className="display-4 mt-2 mb-4" style={{ color: 'var(--heading-color)', fontWeight: '800' }}>{post.title}</h1>
-            {post.featuredImage && (
-              <div style={{ width: '100%', maxHeight: '500px', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', marginBottom: '4rem' }}>
-                <img src={post.featuredImage} alt={post.title} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
-              </div>
-            )}
+            {(() => {
+              if (post.video) {
+                const youtubeId = getYouTubeID(post.video);
+                if (youtubeId) {
+                  return (
+                    <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', marginBottom: '4rem', backgroundColor: '#000' }}>
+                      <iframe
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        src={`https://www.youtube.com/embed/${youtubeId}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  );
+                }
+                return (
+                  <div style={{ width: '100%', maxHeight: '500px', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', marginBottom: '4rem', backgroundColor: '#000' }}>
+                    <video src={post.video} controls style={{ width: '100%', height: '100%', maxHeight: '500px', objectFit: 'cover' }} />
+                  </div>
+                );
+              }
+              if (post.featuredImage) {
+                return (
+                  <div style={{ width: '100%', maxHeight: '500px', borderRadius: '32px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', marginBottom: '4rem' }}>
+                    <img src={post.featuredImage} alt={post.title} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+                  </div>
+                );
+              }
+              return null;
+            })()}
           </div>
         </div>
       </div>

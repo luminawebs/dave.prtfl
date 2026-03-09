@@ -25,6 +25,8 @@ export const fetchBlogPosts = async (preview = false) => {
 
         return response.items.map(item => {
             const featuredImage = item.fields.featuredMedia?.fields?.file?.url;
+            const videoFieldUrl = item.fields.video?.fields?.file?.url || item.fields.video;
+            const video = typeof videoFieldUrl === 'string' ? (videoFieldUrl.startsWith('//') ? `https:${videoFieldUrl}` : videoFieldUrl) : null;
             return {
                 id: item.sys.id,
                 title: item.fields.title || 'Untitled',
@@ -33,6 +35,7 @@ export const fetchBlogPosts = async (preview = false) => {
                 excerpt: item.fields.phrase || '',
                 content: item.fields.body,
                 featuredImage: featuredImage ? (featuredImage.startsWith('//') ? `https:${featuredImage}` : featuredImage) : null,
+                video: video,
             };
         });
     } catch (error) {
@@ -56,6 +59,8 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
             if (item && item.sys.contentType.sys.id === 'blogPage') {
                 console.log('Found blog post by Entry ID');
                 const featuredImage = item.fields.featuredMedia?.fields?.file?.url;
+                const videoFieldUrl = item.fields.video?.fields?.file?.url || item.fields.video;
+                const video = typeof videoFieldUrl === 'string' ? (videoFieldUrl.startsWith('//') ? `https:${videoFieldUrl}` : videoFieldUrl) : null;
                 return {
                     id: item.sys.id,
                     title: item.fields.title || 'Untitled',
@@ -64,6 +69,7 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                     excerpt: item.fields.phrase || '',
                     content: item.fields.body,
                     featuredImage: featuredImage ? (featuredImage.startsWith('//') ? `https:${featuredImage}` : featuredImage) : null,
+                    video: video,
                 };
             }
         } catch (e) {
@@ -83,6 +89,8 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                 console.log('Found blog post by slug field');
                 const item = response.items[0];
                 const featuredImage = item.fields.featuredMedia?.fields?.file?.url;
+                const videoFieldUrl = item.fields.video?.fields?.file?.url || item.fields.video;
+                const video = typeof videoFieldUrl === 'string' ? (videoFieldUrl.startsWith('//') ? `https:${videoFieldUrl}` : videoFieldUrl) : null;
                 return {
                     id: item.sys.id,
                     title: item.fields.title || 'Untitled',
@@ -91,6 +99,7 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                     excerpt: item.fields.phrase || '',
                     content: item.fields.body,
                     featuredImage: featuredImage ? (featuredImage.startsWith('//') ? `https:${featuredImage}` : featuredImage) : null,
+                    video: video,
                 };
             }
         } catch (searchError) {
