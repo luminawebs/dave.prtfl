@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
 import { trackButtonClick, trackContactClick } from '../utils/unifiedAnalytics';
+import { fetchBlogPosts } from '../services/contentfulService';
 import NeonGrassHero from '../components/GravityHero';
 
 
@@ -10,6 +11,23 @@ const HomePage = () => {
   const location = useLocation();
   const { getLocalizedPath } = useLanguage();
   const { t } = useTranslation();
+
+  const [recentPosts, setRecentPosts] = useState([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+
+  useEffect(() => {
+    const loadRecentPosts = async () => {
+      try {
+        const data = await fetchBlogPosts();
+        setRecentPosts(data.slice(0, 3));
+      } catch (err) {
+        console.error('Failed to load recent blog posts.', err);
+      } finally {
+        setLoadingPosts(false);
+      }
+    };
+    loadRecentPosts();
+  }, []);
 
   useEffect(() => {
     const hash = location.hash;
@@ -160,6 +178,83 @@ const HomePage = () => {
               onClick={() => trackButtonClick('View All Case Studies', 'Case Studies')}
             >
               {t('home.case.cta')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts Section */}
+      <section id="recent-blog" className="section">
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Latest Insights</h2>
+          <p>Read my latest thoughts on design, technology, and continuous learning.</p>
+        </div>
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
+          {loadingPosts ? (
+            <div className="text-center w-100 py-4">
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Loading posts...</span>
+              </div>
+            </div>
+          ) : recentPosts.length > 0 ? (
+            <div className="row g-4">
+              {recentPosts.map((post) => (
+                <div key={post.id} className="col-lg-4 col-md-6">
+                  <Link to={getLocalizedPath(`/blog/${post.slug}`)} style={{ textDecoration: 'none' }}>
+                    <div
+                      className="card h-100"
+                      style={{
+                        background: 'var(--surface-color)',
+                        border: '1px solid rgba(25, 249, 105, 0.1)',
+                        borderRadius: '24px',
+                        padding: '1px',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        transition: 'transform 0.3s ease'
+                      }}
+                      onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; }}
+                      onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}
+                    >
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--accent-color) 0%, transparent 100%)', opacity: 0.15 }}></div>
+                      <div
+                        className="card-body"
+                        style={{
+                          background: 'var(--background-color)',
+                          borderRadius: '23px',
+                          padding: '1.5rem',
+                          height: '100%',
+                          position: 'relative',
+                          zIndex: 1
+                        }}
+                      >
+                        {post.featuredImage && (
+                          <div style={{ width: '100%', height: '180px', borderRadius: '12px', overflow: 'hidden', marginBottom: '1rem' }}>
+                            <img src={post.featuredImage} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                          </div>
+                        )}
+                        <div className="d-flex justify-content-between align-items-start mb-2 flex-column">
+                          <h3 className="card-title mb-2" style={{ fontSize: '1.25rem', color: 'var(--heading-color)' }}>{post.title}</h3>
+                          <small style={{ color: 'var(--accent-color)', opacity: 0.8 }}>{new Date(post.date).toLocaleDateString()}</small>
+                        </div>
+                        <p className="card-text mt-2" style={{ color: 'var(--default-color)', fontSize: '0.95rem' }}>{post.excerpt}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="alert bg-dark text-light text-center border-0 p-4" style={{ borderRadius: '16px' }}>
+              No recent blog posts found.
+            </div>
+          )}
+          <div className="mt-4 text-center">
+            <Link
+              to={getLocalizedPath('/blog')}
+              className="btn btn-outline"
+              onClick={() => trackButtonClick('View All Blog Posts', 'Recent Blog Posts')}
+            >
+              View All Posts <i className="bi bi-arrow-right ms-2"></i>
             </Link>
           </div>
         </div>

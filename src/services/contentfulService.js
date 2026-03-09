@@ -1,4 +1,5 @@
 import { createClient } from 'contentful';
+import { slugify } from '../utils/slugify';
 
 const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
@@ -30,7 +31,7 @@ export const fetchBlogPosts = async (preview = false) => {
             return {
                 id: item.sys.id,
                 title: item.fields.title || 'Untitled',
-                slug: item.fields.slug || item.sys.id,
+                slug: item.fields.title ? `${item.sys.id}-${slugify(item.fields.title)}` : item.sys.id,
                 date: item.fields.date || item.sys.createdAt,
                 excerpt: item.fields.phrase || '',
                 content: item.fields.body,
@@ -54,8 +55,10 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
     try {
         // 1. First, try to fetch by ID directly as a fallback or primary method
         // In many cases, the "slug" used in the URL is actually the entry ID
+        // Or in our friendly URL format, it's ID-title-slug
+        const id = slug.split('-')[0];
         try {
-            const item = await currentClient.getEntry(slug);
+            const item = await currentClient.getEntry(id);
             if (item && item.sys.contentType.sys.id === 'blogPage') {
                 console.log('Found blog post by Entry ID');
                 const featuredImage = item.fields.featuredMedia?.fields?.file?.url;
@@ -64,7 +67,7 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                 return {
                     id: item.sys.id,
                     title: item.fields.title || 'Untitled',
-                    slug: item.fields.slug || item.sys.id,
+                    slug: item.fields.title ? `${item.sys.id}-${slugify(item.fields.title)}` : item.sys.id,
                     date: item.fields.date || item.sys.createdAt,
                     excerpt: item.fields.phrase || '',
                     content: item.fields.body,
@@ -73,7 +76,7 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                 };
             }
         } catch (e) {
-            console.log(`Slug ${slug} is not a valid Entry ID or doesn't exist. Trying search by slug field...`);
+            console.log(`ID ${id} is not a valid Entry ID or doesn't exist. Trying search by slug field...`);
         }
 
         // 2. Try to find by slug field if it exists
@@ -94,7 +97,7 @@ export const fetchBlogPostBySlug = async (slug, preview = false) => {
                 return {
                     id: item.sys.id,
                     title: item.fields.title || 'Untitled',
-                    slug: item.fields.slug || item.sys.id,
+                    slug: item.fields.title ? `${item.sys.id}-${slugify(item.fields.title)}` : item.sys.id,
                     date: item.fields.date || item.sys.createdAt,
                     excerpt: item.fields.phrase || '',
                     content: item.fields.body,
