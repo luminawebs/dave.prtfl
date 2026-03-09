@@ -15,7 +15,7 @@ const ResourcesPage = () => {
         const element = document.querySelector(hash);
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
-      
+
       return () => clearTimeout(timer);
     }
   }, [location.hash]);
@@ -24,7 +24,7 @@ const ResourcesPage = () => {
     <main className="main">
       {/* Hero Section for Resources */}
 
-         <div className="page-title dark-background aos-init aos-animate" data-aos="fade">
+      <div className="page-title dark-background aos-init aos-animate" data-aos="fade">
         <div className="container position-relative">
           <h1>Recursos</h1>
           <p>Experiencias inmersivas gratuitas</p>
@@ -36,19 +36,19 @@ const ResourcesPage = () => {
 
             <ol>
               <li>
-                
+
               </li>
             </ol>
           </nav>
         </div>
       </div>
-    
+
 
       {/* Free Resources Section */}
       <FreeResourcesSection trackLinkClick={trackLinkClick} />
 
       {/* AI Proficiency Challenge Section */}
-  
+
 
       {/* Newsletter Signup Section */}
       <section id="newsletter" className="call-to-action section">
@@ -78,15 +78,15 @@ const ResourcesPage = () => {
               </div>
 
               <div className="cta-buttons d-flex flex-wrap gap-3">
-                <a 
-                  href="#contact" 
+                <a
+                  href="mailto:luminawebs@gmail.com"
                   className="btn btn-primary"
                   onClick={() => trackButtonClick('Newsletter CTA - Suscribirse', 'Resources Newsletter')}
                 >
                   Suscribirse al newsletter
                 </a>
-                <a 
-                  href="#free-resources" 
+                <a
+                  href="#free-resources"
                   className="btn btn-outline"
                   onClick={() => trackButtonClick('Newsletter CTA - Ver más recursos', 'Resources Newsletter')}
                 >

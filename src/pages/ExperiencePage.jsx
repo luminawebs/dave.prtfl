@@ -81,14 +81,13 @@ const ExperiencePage = () => {
               </div>
             </div>
           </div>
-
           {/* Experience Timeline */}
           <ExperienceTimeline />
 
           {/* Call to Action */}
           <div className="row mt-5">
             <div className="col-12 text-center">
-              <a href="#contact" className="btn btn-primary btn-lg">
+              <a href="mailto:luminawebs@gmail.com" className="btn btn-primary btn-lg">
                 <i className="bi bi-person-lines-fill me-2"></i>
                 {t('experience.cta') || 'Let\'s discuss your next project'}
               </a>

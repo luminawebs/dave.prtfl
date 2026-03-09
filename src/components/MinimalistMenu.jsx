@@ -5,7 +5,7 @@ import { trackMenuClick } from '../utils/analytics';
 
 const MinimalistMenu = () => {
   const { getLocalizedPath } = useLanguage();
-  
+
   // Handle menu click tracking
   const handleMenuClick = (menuItem, section = 'minimalist_navigation') => {
     trackMenuClick(menuItem, section);
@@ -40,7 +40,7 @@ const MinimalistMenu = () => {
         </li>
         <li>
           <a
-            href="#contact"
+            href="mailto:luminawebs@gmail.com"
             onClick={() => handleMenuClick('Contact', 'minimalist_navigation')}
           >
             Contacto

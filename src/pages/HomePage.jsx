@@ -36,13 +36,14 @@ const HomePage = () => {
             <p className="lead">{t('home.hero.lead')}</p>
             <p>{t('home.hero.description')}</p>
             <div className="d-flex gap-3 mt-4">
-              <Link
-                to={getLocalizedPath('/contact')}
-                className="btn btn-cta"
+              <a
+                href="mailto:luminawebs@gmail.com"
+                className="btn btn-primary"
                 onClick={() => trackButtonClick('Hire Me', 'Hero')}
               >
+                <i className="bi bi-person-fill-check me-2"></i>
                 {t('home.hero.cta.hire')}
-              </Link>
+              </a>
               <Link
                 to={getLocalizedPath('/portfolio')}
                 className="btn btn-outline"
@@ -300,9 +301,13 @@ const HomePage = () => {
                     <a href="/CV.txt" target="_blank" rel="noopener noreferrer" className="btn btn-outline" onClick={() => trackButtonClick('Download CV', 'About Me')}>
                       {t('home.about.cta.cv')}
                     </a>
-                    <Link to={getLocalizedPath('/contact')} className="btn btn-cta" onClick={() => trackButtonClick('Contact Me', 'About Me')}>
+                    <a
+                      href="mailto:luminawebs@gmail.com"
+                      className="btn btn-cta"
+                      onClick={() => trackButtonClick('Contact Me', 'About Me')}
+                    >
                       {t('home.about.cta.contact')}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -317,10 +322,14 @@ const HomePage = () => {
                   <p style={{ color: 'var(--default-color)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.6' }}>{t('home.work.lead')}</p>
 
                   <div className="d-flex flex-wrap gap-3 mt-auto pt-3">
-                    <Link to={getLocalizedPath('/contact')} className="btn btn-cta" onClick={() => trackButtonClick('Book a Call', 'Let’s Work Together')}>
+                    <a
+                      href="mailto:luminawebs@gmail.com"
+                      className="btn btn-cta"
+                      onClick={() => trackButtonClick('Book a Call', 'Let’s Work Together')}
+                    >
                       {t('home.work.cta.call')}
-                    </Link>
-                    <a href="mailto:maurizioroca@hotmail.com" className="btn btn-outline" onClick={() => trackContactClick('Email', 'maurizioroca@hotmail.com')}>
+                    </a>
+                    <a href="mailto:luminawebs@gmail.com" className="btn btn-outline" onClick={() => trackContactClick('Email', 'luminawebs@gmail.com')}>
                       {t('home.work.cta.message')}
                     </a>
                   </div>

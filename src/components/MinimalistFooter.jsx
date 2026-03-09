@@ -15,16 +15,16 @@ const MinimalistFooter = () => {
               </span>
             </Link>
           </div>
-          
+
           <div className="col-lg-4 col-md-6 text-center">
             <div className="footer-links">
               <Link to={getLocalizedPath('/')} className="me-3">Home</Link>
               <Link to={getLocalizedPath('/resources')} className="me-3">Recursos</Link>
               <Link to={getLocalizedPath('/courses')} className="me-3">Courses</Link>
-              <a href="#contact">Contacto</a>
+              <a href="mailto:luminawebs@gmail.com">Contacto</a>
             </div>
           </div>
-          
+
           <div className="col-lg-4 col-md-12 text-end">
             <div className="social-links d-flex justify-content-end">
               <a href="https://www.linkedin.com/company/l%C3%BAmina-interactiva/" target="_blank" rel="noreferrer">
@@ -33,10 +33,10 @@ const MinimalistFooter = () => {
             </div>
           </div>
         </div>
-        
-        <div className="copyright text-center mt-3 pt-3" style={{borderTop: '1px solid #eee'}}>
+
+        <div className="copyright text-center mt-3 pt-3" style={{ borderTop: '1px solid #eee' }}>
           <p className="mb-0">
-            © <span>Copyright</span> <strong className="px-1 sitename">Lúmina Interactiva - Edunest.co</strong> 
+            © <span>Copyright</span> <strong className="px-1 sitename">Lúmina Interactiva - Edunest.co</strong>
             <span>All Rights Reserved</span>
           </p>
         </div>

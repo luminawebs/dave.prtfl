@@ -58,7 +58,7 @@ const ConditionalLayout = ({ children }) => {
               
               <a
                 className="btn-getstarted"
-                href="#contact"
+                href="mailto:luminawebs@gmail.com"
                 onClick={() => trackButtonClick('Header Contact Button', 'Navigation')}
               >
                 {t('header.contact')}

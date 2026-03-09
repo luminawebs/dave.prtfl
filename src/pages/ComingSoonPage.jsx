@@ -83,18 +83,18 @@ const ComingSoonPage = () => {
             <div className="resource-icon">
               <i className={getResourceIcon(resourceName)}></i>
             </div>
-            
+
             <h1>{resourceName}</h1>
             <div className="coming-soon-badge">Próximamente</div>
-            
+
             <p className="resource-description">
               {getResourceDescription(resourceName)}
             </p>
-            
+
             <div className="notify-section">
               <h3>¿Te interesa este recurso?</h3>
               <p>Regístrate para recibir una notificación cuando esté disponible.</p>
-              
+
               <div className="notify-form">
                 <div className="form-group">
                   <input
@@ -108,19 +108,19 @@ const ComingSoonPage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="alternative-actions">
               <h4>Mientras tanto...</h4>
               <div className="action-buttons">
-                <button 
+                <button
                   className="btn btn-secondary"
                   onClick={() => navigate('/ai-proficiency-challenge')}
                 >
                   <i className="bi bi-robot"></i>
                   Tomar el AI Challenge
                 </button>
-                <a 
-                  href="#contact" 
+                <a
+                  href="mailto:luminawebs@gmail.com"
                   className="btn btn-outline"
                 >
                   <i className="bi bi-chat-dots"></i>

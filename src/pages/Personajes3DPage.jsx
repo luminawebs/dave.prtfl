@@ -40,7 +40,7 @@ const Personajes3DPage = () => {
 
             <ol>
               <li>
-                
+
               </li>
             </ol>
           </nav>
@@ -111,7 +111,7 @@ const Personajes3DPage = () => {
           </div>
         </div>
       </section> */}
-     
+
 
 
 
@@ -124,18 +124,18 @@ const Personajes3DPage = () => {
             <div className="col-lg-8 order-lg-1 order-2">
 
 
-    <div style={{ position: 'relative', paddingTop: '56.25%', marginBottom: '30px' }}><iframe
-                    src="https://iframe.mediadelivery.net/embed/354319/33fc09af-d689-4669-8c79-82816f38f0a7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-                    loading="lazy" style={{
-                      border: '0',
-                      position: 'absolute',
-                      top: '0',
-                      height: '100%',
-                      width: '100%'
-                    }}
-                    allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;"
-                    allowFullScreen={true}
-                    title={t('personajes3d.videoTitle')}></iframe></div>
+              <div style={{ position: 'relative', paddingTop: '56.25%', marginBottom: '30px' }}><iframe
+                src="https://iframe.mediadelivery.net/embed/354319/33fc09af-d689-4669-8c79-82816f38f0a7?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+                loading="lazy" style={{
+                  border: '0',
+                  position: 'absolute',
+                  top: '0',
+                  height: '100%',
+                  width: '100%'
+                }}
+                allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;"
+                allowFullScreen={true}
+                title={t('personajes3d.videoTitle')}></iframe></div>
 
 
               <div className="service-main-content">
@@ -155,7 +155,7 @@ const Personajes3DPage = () => {
                   <div className="tab-container">
                     <ul className="nav nav-tabs" role="tablist">
                       <li className="nav-item" role="presentation">
-                        <button 
+                        <button
                           className={`nav-link ${activeTab === 'tab1' ? 'active' : ''}`}
                           onClick={() => setActiveTab('tab1')}
                           type="button"
@@ -165,7 +165,7 @@ const Personajes3DPage = () => {
                         </button>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <button 
+                        <button
                           className={`nav-link ${activeTab === 'tab2' ? 'active' : ''}`}
                           onClick={() => setActiveTab('tab2')}
                           type="button"
@@ -175,7 +175,7 @@ const Personajes3DPage = () => {
                         </button>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <button 
+                        <button
                           className={`nav-link ${activeTab === 'tab3' ? 'active' : ''}`}
                           onClick={() => setActiveTab('tab3')}
                           type="button"
@@ -354,10 +354,11 @@ const Personajes3DPage = () => {
                   <p>{t('personajes3d.cta.description')}</p>
 
                   <a
-                    href="https://wa.me/573103339208?text=Hola,%20quiero%20saber%20más%20sobre%20los%20asistentes%203D"
-                    className="btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                    href="mailto:luminawebs@gmail.com"
+                    className="btn btn-primary btn-lg"
+                    onClick={() => trackButtonClick('Contact - WhatsApp', 'Personajes3D')}
+                  >
+                    <i className="bi bi-envelope me-2"></i>
                     {t('personajes3d.cta.button')}
                   </a>
 
@@ -474,7 +475,7 @@ const Personajes3DPage = () => {
                   </ul>
                 </div>
                 <div className="plan-cta">
-                  <a href="#contact" className="btn-plan">{t('personajes3d.pricing.basic.button')}</a>
+                  <a href="mailto:luminawebs@gmail.com" className="btn-plan">{t('personajes3d.pricing.basic.button')}</a>
                 </div>
               </div>
             </div>
@@ -507,7 +508,7 @@ const Personajes3DPage = () => {
                   </ul>
                 </div>
                 <div className="plan-cta">
-                  <a href="#contact" className="btn-plan">{t('personajes3d.pricing.standard.button')}</a>
+                  <a href="mailto:luminawebs@gmail.com" className="btn-plan">{t('personajes3d.pricing.standard.button')}</a>
                 </div>
               </div>
             </div>
@@ -539,7 +540,7 @@ const Personajes3DPage = () => {
                   </ul>
                 </div>
                 <div className="plan-cta">
-                  <a href="#contact" className="btn-plan">{t('personajes3d.pricing.advanced.button')}</a>
+                  <a href="mailto:luminawebs@gmail.com" className="btn-plan">{t('personajes3d.pricing.advanced.button')}</a>
                 </div>
               </div>
             </div>
@@ -564,7 +565,7 @@ const Personajes3DPage = () => {
                   <div className="price-total">{t('personajes3d.pricing.premium.total')}</div>
                 </div>
                 <div className="plan-features">
-                
+
                   <ul>
                     {t('personajes3d.pricing.premium.features').map((feature, index) => (
                       <li key={index}><i className="bi bi-check-circle-fill"></i> {feature}</li>
@@ -573,7 +574,7 @@ const Personajes3DPage = () => {
 
                 </div>
                 <div className="plan-cta">
-                  <a href="#contact" className="btn-plan">{t('personajes3d.pricing.premium.button')}</a>
+                  <a href="mailto:luminawebs@gmail.com" className="btn-plan">{t('personajes3d.pricing.premium.button')}</a>
                 </div>
               </div>
             </div>
@@ -591,7 +592,7 @@ const Personajes3DPage = () => {
               <li>Precios sujetos a cambios según complejidad del proyecto</li>
             </ul>
             <div className="text-center mt-4">
-              <a href="#contact" className="btn btn-outline-primary">¿Preguntas? Contáctanos</a>
+              <a href="mailto:luminawebs@gmail.com" className="btn btn-outline-primary">¿Preguntas? Contáctanos</a>
             </div>
           </div>
         </div>
